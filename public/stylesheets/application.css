@@ -2161,10 +2161,6 @@ input.validation-code {
   font-weight: 600;
 }
 
-.csv-explain .example-csv .row-four td {
-  height: 22px;
-}
-
 .csv-explain .data-rules .column {
   width: 15%;
 }
