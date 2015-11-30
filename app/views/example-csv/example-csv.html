@@ -1,0 +1,384 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+	<header class="page-header">
+	</header>
+	<main id="content" role="main" class="csv-explain">
+		<div class="phase-banner beta-banner">
+			<p>
+				<strong class="phase-tag">BETA</strong>
+				<span>This is a new service – your
+					<a href="#">feedback</a>will help us to improve it.</span>
+			</p>
+		</div>
+
+		<h1 class="heading-xlarge">Data Returns example CSV table</h1>
+		<p>Here is an example CSV:</p>
+			<div class="example-csv">
+				<table cellspacing="0" cellpadding="0">
+					<thead>
+						<tr class="row-header">
+							<th></th>
+							<th>A</th>
+							<th>B</th>
+							<th>C</th>
+							<th>D</th>
+							<th>E</th>
+							<th>F</th>
+							<th>G</th>
+							<th>H</th>
+							<th>I</th>
+							<th>J</th>
+							<th>K</th>
+							<th>L</th>
+							<th>M</th>
+							<th>N</th>
+							<th>O</th>
+							<th>P</th>
+							<th>Q</th>
+							<th>R</th>
+							<th>S</th>
+							<th>T</th>
+							<th>U</th>
+							<th>V</th>
+							<th>W</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="row-one">
+							<th>1</th>
+							<td>eaID</td>
+							<td>siteName</td>
+							<td>retType</td>
+							<td>dateSt</td>
+							<td>dateEn</td>
+							<td>periodName</td>
+							<td>periodYear</td>
+							<td>sampleRef</td>
+							<td>sampledBy</td>
+							<td>monPoint</td>
+							<td>parameter</td>
+							<td>value</td>
+							<td>tValue</td>
+							<td>Unit</td>
+							<td>MeasurePeriod</td>
+							<td>testMethod</td>
+							<td>Comments</td>
+							<td>CiC</td>
+							<td>addParameter1</td>
+							<td>addParameter2</td>
+							<td>addParameter3</td>
+							<td>addParameter4</td>
+							<td>addParameter5</td>
+						</tr>
+						<tr class="row-two">
+							<th>2</th>
+							<td>AB1234ZZ</td>
+							<td>Leeds Landfill Site</td>
+							<td>Landfill Gas Monitoring</td>
+							<td>8/5/2013 10:28:00</td>
+							<td>9/30/2013</td>
+							<td>Q2</td>
+							<td>2015</td>
+							<td>ABCD1234</td>
+							<td>NG Monitoring Services</td>
+							<td>A1</td>
+							<td>Temperature</td>
+							<td>7</td>
+							<td></td>
+							<td>C</td>
+							<td>Weekly</td>
+							<td>BS EN 14791</td>
+							<td>Borehole blocked</td>
+							<td>TRUE</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="row-three">
+							<th>3</th>
+							<td>AB1234ZZ</td>
+							<td>Leeds Landfill Site</td>
+							<td>Landfill Gas Monitoring</td>
+							<td>8/5/2013 11:23:05</td>
+							<td>9/30/2013</td>
+							<td>Q2</td>
+							<td>2015</td>
+							<td>ABCD1235</td>
+							<td>NG Monitoring Services</td>
+							<td>B1</td>
+							<td>Methane</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+				
+				<div class="data-rules">
+					<h1 class="heading-large">Data formatting rules</h1>
+					<p>Use this table to help format your CSV file</p>
+					
+					<table>
+				  <thead>
+				    <tr>
+				      <th scope="col" class="column">Column</th>
+				      <th scope="col" class="description">Description</th>
+				      <th scope="col" class="example">Example</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>
+				      	<span class="field">eaID</span>
+				      	<!-- EA Unique Identifier -->
+				      </td>
+				      <td>
+				      	EA Unique Identifier. Your permit number or mineral extraction ID
+						     <details class="eaID">
+						       <summary><span class="summary">Rules</span></summary>
+						       <div class="panel-indent">
+						         <p>Exotic characters/symbols e.g. ., !, ", £, $, %, +, ^, &, *, (), {},[], :, ;, @,~, \, /, |, <, >, ?, , should be avoided but see the Regime Specific Rules for the Return Type in question for details of this data element.</p>
+						       </div>
+						     </details>
+					    	</td>
+				      <td class="example">AB1234ZX</td>
+				    </tr>
+			      <tr>
+			        <td><span class="field">siteName</span>
+				        <!-- Site name<br>
+				        Location name -->
+			        </td>
+			        <td>Site or location name. Exactly as it is presented on the permit
+			        <details class="site-name">
+			          <summary><span class="summary">Rules</span></summary>
+			          <div class="panel-indent">
+			            <p>Exotic characters/symbols e.g. ., !, ", £, $, %, +, ^, &, *, (), {},[], :, ;, @,~, \, /, |, <, >, ?, , should be avoided but see the Regime Specific Rules for the Return Type in question for details of this data element.</p>
+			          </div>
+			        </details>
+			        </td>
+			        <td class="example">Leeds Landfill Site</td>
+			      </tr>
+		        <tr>
+		          <td><span class="field">retType</span>
+		          	<!-- Return type --></td>
+		          <td>Return type. This comes from a controlled list
+		          <details class="site-name">
+		            <summary><span class="summary">Rules</span></summary>
+		            <div class="panel-indent">
+		              <p>XXXX</p>
+		            </div>
+		          </details>
+		          </td>
+		          <td class="example">Landfill Gas Monitoring</td>
+				    </tr>
+			      <tr>
+			        <td><span class="field">dateSt</span>
+							<!-- Start date<br>
+			        Monitoring start date -->
+			        </td>
+			        <td>Monitoring start date/time
+			        <details class="site-name">
+			          <summary><span class="summary">Rules</span></summary>
+			          <div class="panel-indent">
+			            <p>Format is DD/MM/YYYY hh:mm:ss or DD/MM/YYYY when only date is required</p>
+			          </div>
+			        </details>
+			        </td>
+			        <td class="example">05/08/2013 10:28 Date/Time</td>
+			      </tr>
+			      <tr>
+			        <td><span class="field">dateEn</span></td>
+			        <td>Monitoring end date/time
+			        <details class="site-name">
+			          <summary><span class="summary">Rules</span></summary>
+			          <div class="panel-indent">
+			            <p>Format is DD/MM/YYYY hh:mm:ss or DD/MM/YYYY when only date is required</p>
+			          </div>
+			        </details>
+			        </td>
+			        <td class="example">05/08/2013</td>
+			      </tr>
+			      <tr>
+			        <td><span class="field">periodName</span></td>
+			        <td>The monitoring period name can be daily, quarterly, annually or a range of dates.
+			        <details class="site-name">
+			          <summary><span class="summary">Rules</span></summary>
+			          <div class="panel-indent">
+			            <p>XXXX</p>
+			          </div>
+			        </details>
+			        </td>
+			        <td class="example"></td>
+			      </tr>
+			      <tr>
+			        <td><span class="field">periodYear</span></td>
+			        <td>This is the monitoring period year
+			        <details class="site-name">
+			          <summary><span class="summary">Rules</span></summary>
+			          <div class="panel-indent">
+			            <p>XXXX</p>
+			          </div>
+			        </details>
+			        </td>
+			        <td class="example"></td>
+			      </tr>
+			      <tr>
+			        <td><span class="field">sampleRef</span></td>
+			        <td>The sample ref is free text. It can be anything but can’t include exotic characters
+			        <details class="site-name">
+			          <summary><span class="summary">Rules</span></summary>
+			          <div class="panel-indent">
+			            <p>XXXX</p>
+			          </div>
+			        </details>
+			        </td>
+			        <td class="example"></td>
+			      </tr>
+			      <tr>
+			        <td><span class="field">sampledBy</span></td>
+			        <td>Sampled by is the name of person, group, contracting company
+			        <details class="site-name">
+			          <summary><span class="summary">Rules</span></summary>
+			          <div class="panel-indent">
+			            <p>XXXX</p>
+			          </div>
+			        </details>
+			        </td>
+			        <td class="example"></td>
+			      </tr>
+			      <tr>
+			        <td><span class="field">monPoint</span></td>
+			        <td>The monitoring point reference is free text explaining where the data was retrieved using names given in the permit conditions
+			        <details class="site-name">
+			          <summary><span class="summary">Rules</span></summary>
+			          <div class="panel-indent">
+			            <p>XXXX</p>
+			          </div>
+			        </details>
+			        </td>
+			        <td class="example"></td>
+			      </tr>
+			      <tr>
+			        <td><span class="field">parameter</span></td>
+			        <td>The parameter comes from a controlled list. It is usually a substance but can be a measure such as temperature
+			        <details class="site-name">
+			          <summary><span class="summary">Rules</span></summary>
+			          <div class="panel-indent">
+			            <p>XXXX</p>
+			          </div>
+			        </details>
+			        </td>
+			        <td class="example"></td>
+			      </tr>
+			      <tr>
+			        <td><span class="field">value</span></td>
+			        <td>This numerical value can only contain a number
+			        <details class="site-name">
+			          <summary><span class="summary">Rules</span></summary>
+			          <div class="panel-indent">
+			            <p>XXXX</p>
+			          </div>
+			        </details>
+			        </td>
+			        <td class="example"></td>
+			      </tr>
+			      <tr>
+			        <td><span class="field">tValue</span></td>
+			        <td>Text value. Can be a qualifier (such as &lt; or &gt;, Y/N or TRUE/FALSE
+			        <details class="site-name">
+			          <summary><span class="summary">Rules</span></summary>
+			          <div class="panel-indent">
+			            <p>XXXX</p>
+			          </div>
+			        </details>
+			        </td>
+			        <td class="example"></td>
+			      </tr>
+			      <tr>
+			        <td><span class="field">Unit</span></td>
+			        <td>Only specific values are allowed
+			        <details class="site-name">
+			          <summary><span class="summary">Rules</span></summary>
+			          <div class="panel-indent">
+			            <p>XXXX</p>
+			          </div>
+			        </details>
+			        </td>
+			        <td class="example"></td>
+			      </tr>
+			      <tr>
+			        <td><span class="field">MeasurePeriod</span></td>
+			        <td>Reference Period for the measurement
+			        <details class="site-name">
+			          <summary><span class="summary">Rules</span></summary>
+			          <div class="panel-indent">
+			            <p>XXXX</p>
+			          </div>
+			        </details>
+			        </td>
+			        <td class="example"></td>
+			      </tr>
+			      <tr>
+			        <td><span class="field">testMethod</span></td>
+			        <td>Test Methodology or Monitoring Standard
+			        <details class="site-name">
+			          <summary><span class="summary">Rules</span></summary>
+			          <div class="panel-indent">
+			            <p>XXXX</p>
+			          </div>
+			        </details>
+			        </td>
+			        <td class="example"></td>
+			      </tr>
+			      <tr>
+			        <td><span class="field">Comments</span></td>
+			        <td>
+			        <details class="site-name">
+			          <summary><span class="summary">Rules</span></summary>
+			          <div class="panel-indent">
+			            <p>XXXX</p>
+			          </div>
+			        </details>
+			        </td>
+			        <td class="example"></td>
+			      </tr>
+			      <tr>
+			        <td><span class="field">CiC</span></td>
+			        <td>
+			        <details class="site-name">
+			          <summary><span class="summary">Rules</span></summary>
+			          <div class="panel-indent">
+			            <p>XXXX</p>
+			          </div>
+			        </details>
+			        </td>
+			        <td class="example"></td>
+			      </tr>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+	</main>
+		
+			
+			{{/content}}
+			
+			{{/layout}}
