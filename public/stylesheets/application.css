@@ -2144,6 +2144,7 @@ input.validation-code {
 .csv-explain .example-csv {
   max-width: 100%;
   overflow-x: scroll;
+  margin-bottom: 30px;
 }
 
 .csv-explain .example-csv th, .csv-explain .example-csv td {
