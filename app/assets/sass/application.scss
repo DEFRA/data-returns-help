@@ -125,7 +125,7 @@
 .img-responsive {
 	min-width:100%;
 	width: 100%;
-	    height: auto;
+	height: auto;
 }
 
 .permit-number {
@@ -183,6 +183,30 @@ input.validation-code {
 	}
 }
 
+/* Warning weight */
+.warning_message{
+  border: 3px solid #F47738;
+  padding: 15px 30px;
+  margin-bottom: 30px;
+  background-color:#FFBF47;
+  min-height: 35px;
+  max-width: 85%;
+  }
+
+.warning-weight{
+	font-weight:600;
+	}
+
+.warning-space{
+	padding-top:15px;
+	}
+	
+.icon-important {
+    padding-right: 10px;
+    padding-bottom: 20px;
+    background: none;
+}
+
 /* Autocomplete */
 
 .ui-autocomplete {
@@ -218,19 +242,27 @@ input.validation-code {
 	.example-csv {
 		max-width:100%;
 		overflow-x: scroll;
-		margin-bottom:30px;
+		margin-bottom:15px;
 		th, td {
 			border: 1px solid #bfc1c3;
-			white-space:nowrap;
-			padding-left:10px;
+	    padding: 3px 10px 3px 5px;
+	    white-space: nowrap;
 		}
 		th {
 			background:$grey-3;
+			font-weight:400;
 		}
 		.row-one td {
 			font-weight:600;
 		}
 		.row-two td {
+		}
+		
+		tbody {
+			th {
+				text-align:center;
+				padding-right:5px;
+			}
 		}
 	}
 	.data-rules {
@@ -241,10 +273,10 @@ input.validation-code {
 			width:15%;
 		}
 		.description {
-			width:50%;
+			width:45%;
 		}
 		.example {
-			width:15%;
+			width:20%;
 		}
 		table {
 			td {
@@ -257,6 +289,14 @@ input.validation-code {
 				color:$grey-1;
 				font-style:italic;
 			}
+		}
+	}
+	.save-as-csv {
+		b {
+			font-weight:bold;
+		}
+		img {
+			margin-top:15px;
 		}
 	}
 }

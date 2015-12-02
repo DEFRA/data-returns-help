@@ -2108,6 +2108,30 @@ input.validation-code {
   max-width: 200px;
 }
 
+/* Warning weight */
+.warning_message {
+  border: 3px solid #F47738;
+  padding: 15px 30px;
+  margin-bottom: 30px;
+  background-color: #FFBF47;
+  min-height: 35px;
+  max-width: 85%;
+}
+
+.warning-weight {
+  font-weight: 600;
+}
+
+.warning-space {
+  padding-top: 15px;
+}
+
+.icon-important {
+  padding-right: 10px;
+  padding-bottom: 20px;
+  background: none;
+}
+
 /* Autocomplete */
 .ui-autocomplete {
   padding: 0;
@@ -2144,21 +2168,27 @@ input.validation-code {
 .csv-explain .example-csv {
   max-width: 100%;
   overflow-x: scroll;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .csv-explain .example-csv th, .csv-explain .example-csv td {
   border: 1px solid #bfc1c3;
+  padding: 3px 10px 3px 5px;
   white-space: nowrap;
-  padding-left: 10px;
 }
 
 .csv-explain .example-csv th {
   background: #dee0e2;
+  font-weight: 400;
 }
 
 .csv-explain .example-csv .row-one td {
   font-weight: 600;
+}
+
+.csv-explain .example-csv tbody th {
+  text-align: center;
+  padding-right: 5px;
 }
 
 .csv-explain .data-rules .column-description {
@@ -2170,11 +2200,11 @@ input.validation-code {
 }
 
 .csv-explain .data-rules .description {
-  width: 50%;
+  width: 45%;
 }
 
 .csv-explain .data-rules .example {
-  width: 15%;
+  width: 20%;
 }
 
 .csv-explain .data-rules table td {
@@ -2188,6 +2218,14 @@ input.validation-code {
 .csv-explain .data-rules table td.example {
   color: #6f777b;
   font-style: italic;
+}
+
+.csv-explain .save-as-csv b {
+  font-weight: bold;
+}
+
+.csv-explain .save-as-csv img {
+  margin-top: 15px;
 }
 
 /* Parameter list */
