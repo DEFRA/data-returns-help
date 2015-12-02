@@ -163,7 +163,8 @@
 					<table>
 				  <thead>
 				    <tr>
-				      <th scope="col" class="column">Column</th>
+				      <th scope="col" class="column-description">Column description</th>
+				      <th scope="col" class="column-heading">Column heading</th>
 				      <th scope="col" class="description">Description</th>
 				      <th scope="col" class="example">Example</th>
 				    </tr>
@@ -171,230 +172,286 @@
 				  <tbody>
 				    <tr>
 				      <td>
+				      	<span class="desc">EA reference <br>(<b>mandatory</b>)</span>
+				      	<!-- EA Unique Identifier -->
+				      </td>
+				      <td>
 				      	<span class="field">eaID</span>
 				      	<!-- EA Unique Identifier -->
 				      </td>
 				      <td>
-				      	EA Unique Identifier. Your permit number or mineral extraction ID
-						     <details class="eaID">
+				      	This is a unique alphanumeric reference given in your Environment Agency permit or licence. It doesn’t include slashes, spaces or any other separators.
+						     <!-- <details class="eaID">
 						       <summary><span class="summary">Rules</span></summary>
 						       <div class="panel-indent">
 						         <p>Exotic characters/symbols e.g. ., !, ", £, $, %, +, ^, &, *, (), {},[], :, ;, @,~, \, /, |, <, >, ?, , should be avoided but see the Regime Specific Rules for the Return Type in question for details of this data element.</p>
 						       </div>
-						     </details>
+						     </details> -->
 					    	</td>
-				      <td class="example">AB1234ZX</td>
+				      <td class="example">AB12345Z1</td>
 				    </tr>
 			      <tr>
+			        <td>
+			        	<span class="desc">Site name</span>
+			        	<!-- EA Unique Identifier -->
+			        </td>
 			        <td><span class="field">siteName</span>
 				        <!-- Site name<br>
 				        Location name -->
 			        </td>
-			        <td>Site or location name. Exactly as it is presented on the permit
-			        <details class="site-name">
+			        <td>This must be exactly the same as that given in your permit or licence. It’s not <b>mandatory</b> but it’s helpful to check against your EA reference.
+			        <!-- <details class="site-name">
 			          <summary><span class="summary">Rules</span></summary>
 			          <div class="panel-indent">
 			            <p>Exotic characters/symbols e.g. ., !, ", £, $, %, +, ^, &, *, (), {},[], :, ;, @,~, \, /, |, <, >, ?, , should be avoided but see the Regime Specific Rules for the Return Type in question for details of this data element.</p>
 			          </div>
-			        </details>
+			        </details> -->
 			        </td>
-			        <td class="example">Leeds Landfill Site</td>
+			        <td class="example">NJG Ltd</td>
 			      </tr>
 		        <tr>
+		          <td>
+		          	<span class="desc">Return type <br>(<b>mandatory</b>)</span>
+		          	<!-- EA Unique Identifier -->
+		          </td>
 		          <td><span class="field">retType</span>
 		          	<!-- Return type --></td>
-		          <td>Return type. This comes from a controlled list
-		          <details class="site-name">
+		          <td>This is the type of return you’re sending, taken from a controlled list maintained and supplied by the Environment Agency.     [not in permit or licence]
+		          <!-- <details class="site-name">
 		            <summary><span class="summary">Rules</span></summary>
 		            <div class="panel-indent">
 		              <p>XXXX</p>
 		            </div>
-		          </details>
+		          </details> -->
 		          </td>
 		          <td class="example">Landfill Gas Monitoring</td>
 				    </tr>
 			      <tr>
+			        <td>
+			        	<span class="desc">Start date</span>
+			        	<!-- EA Unique Identifier -->
+			        </td>
 			        <td><span class="field">dateSt</span>
 							<!-- Start date<br>
 			        Monitoring start date -->
 			        </td>
-			        <td>Monitoring start date/time
-			        <details class="site-name">
+			        <td><b>Mandatory</b> if there’s no period name. All dates and times have to be formatted YYYY-MM-DD (hyphens as separators). If you’re adding a time, use a space after the date entry then use the 24-hour clock in the format hh:mm:ss (colons as separators). See regime specific rules to find out if your time measurements must include seconds for spot sampling.
+			        <!-- <details class="site-name">
 			          <summary><span class="summary">Rules</span></summary>
 			          <div class="panel-indent">
 			            <p>Format is DD/MM/YYYY hh:mm:ss or DD/MM/YYYY when only date is required</p>
 			          </div>
-			        </details>
+			        </details> -->
 			        </td>
-			        <td class="example">05/08/2013 10:28 Date/Time</td>
+			        <td class="example">2013-08-05 15:28</td>
 			      </tr>
 			      <tr>
+			        <td>
+			        	<span class="desc">End date</span>
+			        	<!-- EA Unique Identifier -->
+			        </td>
 			        <td><span class="field">dateEn</span></td>
-			        <td>Monitoring end date/time
-			        <details class="site-name">
+			        <td>All dates and times have to be formatted YYYY-MM-DD (hyphens as separators) hh:mm:ss (colons as separators).
+			        <!-- <details class="site-name">
 			          <summary><span class="summary">Rules</span></summary>
 			          <div class="panel-indent">
 			            <p>Format is DD/MM/YYYY hh:mm:ss or DD/MM/YYYY when only date is required</p>
 			          </div>
-			        </details>
+			        </details> -->
 			        </td>
-			        <td class="example">05/08/2013</td>
+			        <td class="example">2013-08-06 13:02</td>
 			      </tr>
 			      <tr>
+			        <td>
+			        	<span class="desc">Monitoring period name</span>
+			        	<!-- EA Unique Identifier -->
+			        </td>
 			        <td><span class="field">periodName</span></td>
-			        <td>The monitoring period name can be daily, quarterly, annually or a range of dates.
-			        <details class="site-name">
+			        <td><b>Mandatory</b> if there’s no start date. This is given in regime specific rules.
+			        <!-- <details class="site-name">
 			          <summary><span class="summary">Rules</span></summary>
 			          <div class="panel-indent">
 			            <p>XXXX</p>
 			          </div>
-			        </details>
+			        </details> -->
 			        </td>
-			        <td class="example"></td>
+			        <td class="example">eg, January 2013 or Q1 2013</td>
 			      </tr>
 			      <tr>
-			        <td><span class="field">periodYear</span></td>
-			        <td>This is the monitoring period year
-			        <details class="site-name">
-			          <summary><span class="summary">Rules</span></summary>
-			          <div class="panel-indent">
-			            <p>XXXX</p>
-			          </div>
-			        </details>
+			        <td>
+			        	<span class="desc">Sample reference</span>
+			        	<!-- EA Unique Identifier -->
 			        </td>
-			        <td class="example"></td>
-			      </tr>
-			      <tr>
 			        <td><span class="field">sampleRef</span></td>
-			        <td>The sample ref is free text. It can be anything but can’t include exotic characters
-			        <details class="site-name">
+			        <td>This is alphanumeric. It isn’t <b>mandatory</b>, so you can leave blank, but it helps to group together measurements, eg for water sampling.
+			        <!-- <details class="site-name">
 			          <summary><span class="summary">Rules</span></summary>
 			          <div class="panel-indent">
 			            <p>XXXX</p>
 			          </div>
-			        </details>
+			        </details> -->
 			        </td>
-			        <td class="example"></td>
+			        <td class="example">ABCD1234</td>
 			      </tr>
 			      <tr>
+			        <td>
+			        	<span class="desc">Sample taken by</span>
+			        	<!-- EA Unique Identifier -->
+			        </td>
 			        <td><span class="field">sampledBy</span></td>
-			        <td>Sampled by is the name of person, group, contracting company
-			        <details class="site-name">
+			        <td>This is a free-text field identifying the person, group, contracting company or name of machinery responsible for taking the sample. For some returns this is a requirement (see regime specific rules), otherwise it can be left blank. This can’t include exotic characters or symbols. 
+			        <!-- <details class="site-name">
 			          <summary><span class="summary">Rules</span></summary>
 			          <div class="panel-indent">
 			            <p>XXXX</p>
 			          </div>
-			        </details>
+			        </details> -->
 			        </td>
-			        <td class="example"></td>
+			        <td class="example">MRAF Ltd</td>
 			      </tr>
 			      <tr>
+			        <td>
+			        	<span class="desc">Monitoring point</span>
+			        	<!-- EA Unique Identifier -->
+			        </td>
 			        <td><span class="field">monPoint</span></td>
-			        <td>The monitoring point reference is free text explaining where the data was retrieved using names given in the permit conditions
-			        <details class="site-name">
+			        <td>This describes the sampling or emission point for gathering data, as agreed in the application, permit or working plan. For some returns this will have been given as ‘site’, if so leave blank. 
+			        <!-- <details class="site-name">
 			          <summary><span class="summary">Rules</span></summary>
 			          <div class="panel-indent">
 			            <p>XXXX</p>
 			          </div>
-			        </details>
+			        </details> -->
 			        </td>
-			        <td class="example"></td>
+			        <td class="example">[specific location]</td>
 			      </tr>
 			      <tr>
+			        <td>
+			        	<span class="desc">Substance (or sometimes measurement)</span>
+			        	<!-- EA Unique Identifier -->
+			        </td>
 			        <td><span class="field">parameter</span></td>
-			        <td>The parameter comes from a controlled list. It is usually a substance but can be a measure such as temperature
-			        <details class="site-name">
+			        <td>This is specified in a controlled list maintained and supplied by the Environment Agency.
+			        <!-- <details class="site-name">
 			          <summary><span class="summary">Rules</span></summary>
 			          <div class="panel-indent">
 			            <p>XXXX</p>
 			          </div>
-			        </details>
+			        </details> -->
 			        </td>
-			        <td class="example"></td>
+			        <td class="example">CH4</td>
 			      </tr>
 			      <tr>
+			        <td>
+			        	<span class="desc">Numerical value</span>
+			        	<!-- EA Unique Identifier -->
+			        </td>
 			        <td><span class="field">value</span></td>
-			        <td>This numerical value can only contain a number
-			        <details class="site-name">
+			        <td>This is the numerical value of your data. It can include zeros or you can leave blank. See the regime specific rules to find out if you’re expected to provide decimal places.
+			        <!-- <details class="site-name">
 			          <summary><span class="summary">Rules</span></summary>
 			          <div class="panel-indent">
 			            <p>XXXX</p>
 			          </div>
-			        </details>
+			        </details> -->
 			        </td>
-			        <td class="example"></td>
+			        <td class="example">123</td>
 			      </tr>
 			      <tr>
+			        <td>
+			        	<span class="desc">Text value</span>
+			        	<!-- EA Unique Identifier -->
+			        </td>
 			        <td><span class="field">tValue</span></td>
-			        <td>Text value. Can be a qualifier (such as &lt; or &gt;, Y/N or TRUE/FALSE
-			        <details class="site-name">
+			        <td>You can use this field to give necessary text-based values - or Y/N or TRUE/FALSE. If it’s required this value will be specified in a controlled list maintained and supplied by the Environment Agency.
+			        <!-- <details class="site-name">
 			          <summary><span class="summary">Rules</span></summary>
 			          <div class="panel-indent">
 			            <p>XXXX</p>
 			          </div>
-			        </details>
+			        </details> -->
 			        </td>
-			        <td class="example"></td>
+			        <td class="example">FALSE</td>
 			      </tr>
 			      <tr>
+			        <td>
+			        	<span class="desc">Unit for measurement</span>
+			        	<!-- EA Unique Identifier -->
+			        </td>
 			        <td><span class="field">Unit</span></td>
-			        <td>Only specific values are allowed
-			        <details class="site-name">
+			        <td>This applies to most returns but not all. For pH values leave blank. This is an alphanumeric field. Emissions readings must be given in %v/v or mg/m3. Temperatures must be given in DegC and pressure as KPa or mBar.
+			        <!-- <details class="site-name">
 			          <summary><span class="summary">Rules</span></summary>
 			          <div class="panel-indent">
 			            <p>XXXX</p>
 			          </div>
-			        </details>
+			        </details> -->
 			        </td>
-			        <td class="example"></td>
+			        <td class="example">mg/m3</td>
 			      </tr>
 			      <tr>
+			        <td>
+			        	<span class="desc">Reference period</span>
+			        	<!-- EA Unique Identifier -->
+			        </td>
 			        <td><span class="field">MeasurePeriod</span></td>
-			        <td>Reference Period for the measurement
-			        <details class="site-name">
+			        <td>Give this information if it’s a requirement of your permit or leave blank. 
+			        <!-- <details class="site-name">
 			          <summary><span class="summary">Rules</span></summary>
 			          <div class="panel-indent">
 			            <p>XXXX</p>
 			          </div>
-			        </details>
+			        </details> -->
 			        </td>
-			        <td class="example"></td>
+			        <td class="example">15 min average</td>
 			      </tr>
 			      <tr>
+			        <td>
+			        	<span class="desc">Test methodology or standard</span>
+			        	<!-- EA Unique Identifier -->
+			        </td>
 			        <td><span class="field">testMethod</span></td>
-			        <td>Test Methodology or Monitoring Standard
-			        <details class="site-name">
+			        <td>Give this information if it’s a specified requirement of your permit or leave blank.
+			        <!-- <details class="site-name">
 			          <summary><span class="summary">Rules</span></summary>
 			          <div class="panel-indent">
 			            <p>XXXX</p>
 			          </div>
-			        </details>
+			        </details> -->
 			        </td>
-			        <td class="example"></td>
+			        <td class="example">BS EN1111</td>
 			      </tr>
 			      <tr>
+			        <td>
+			        	<span class="desc">&nbsp;</span>
+			        	<!-- EA Unique Identifier -->
+			        </td>
 			        <td><span class="field">Comments</span></td>
-			        <td>
-			        <details class="site-name">
+			        <td>Free text
+			        <!-- <details class="site-name">
 			          <summary><span class="summary">Rules</span></summary>
 			          <div class="panel-indent">
 			            <p>XXXX</p>
 			          </div>
-			        </details>
+			        </details> -->
 			        </td>
 			        <td class="example"></td>
 			      </tr>
 			      <tr>
-			        <td><span class="field">CiC</span></td>
 			        <td>
-			        <details class="site-name">
+			        	<span class="desc">Commercial in confidence status</span>
+			        	<!-- EA Unique Identifier -->
+			        </td>
+			        <td><span class="field">CiC</span></td>
+			        <td>This is optional so you can leave blank or use Y/N, TRUE/FALSE. As the data return is for a public register it’s unlikely that you’ll need to use this field to label data as sensitive. 
+			        <!-- <details class="site-name">
 			          <summary><span class="summary">Rules</span></summary>
 			          <div class="panel-indent">
 			            <p>XXXX</p>
 			          </div>
-			        </details>
+			        </details> -->
 			        </td>
-			        <td class="example"></td>
+			        <td class="example">YES</td>
 			      </tr>
 				  </tbody>
 				</table>

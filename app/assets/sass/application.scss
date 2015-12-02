@@ -234,18 +234,24 @@ input.validation-code {
 		}
 	}
 	.data-rules {
-		.column {
+		.column-description {
+			width:20%;
+		}
+		.column-heading {
 			width:15%;
 		}
 		.description {
-			width:60%;
+			width:50%;
 		}
 		.example {
-			width:25%;
+			width:15%;
 		}
 		table {
 			td {
 				vertical-align:top;
+				b {
+					font-weight:bold;
+				}
 			}
 			td.example {
 				color:$grey-1;

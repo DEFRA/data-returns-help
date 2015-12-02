@@ -2161,20 +2161,28 @@ input.validation-code {
   font-weight: 600;
 }
 
-.csv-explain .data-rules .column {
+.csv-explain .data-rules .column-description {
+  width: 20%;
+}
+
+.csv-explain .data-rules .column-heading {
   width: 15%;
 }
 
 .csv-explain .data-rules .description {
-  width: 60%;
+  width: 50%;
 }
 
 .csv-explain .data-rules .example {
-  width: 25%;
+  width: 15%;
 }
 
 .csv-explain .data-rules table td {
   vertical-align: top;
+}
+
+.csv-explain .data-rules table td b {
+  font-weight: bold;
 }
 
 .csv-explain .data-rules table td.example {
