@@ -314,3 +314,30 @@ input.validation-code {
 		}
 	}
 }
+
+/* Error table */
+.error-table {
+	table {
+	    margin-bottom: 30px;
+    	td {
+    		vertical-align:top;
+    		b {
+    			font-weight:bold;
+    		}
+    		p:first-child {
+    			margin-top:0;
+    		}
+    		p:last-child {
+    			margin-bottom:0;
+    		}
+    	}
+	}
+	.units {
+		ul {
+			li {
+				padding: 0.75em 1.25em 0.5625em 0;
+			}
+		}
+	}
+}
+

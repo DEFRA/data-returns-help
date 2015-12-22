@@ -2236,3 +2236,28 @@ input.validation-code {
   border: 1px solid #6f777b;
   padding: 5px;
 }
+
+/* Error table */
+.error-table table {
+  margin-bottom: 30px;
+}
+
+.error-table table td {
+  vertical-align: top;
+}
+
+.error-table table td b {
+  font-weight: bold;
+}
+
+.error-table table td p:first-child {
+  margin-top: 0;
+}
+
+.error-table table td p:last-child {
+  margin-bottom: 0;
+}
+
+.error-table .units ul li {
+  padding: 0.75em 1.25em 0.5625em 0;
+}
