@@ -2258,6 +2258,16 @@ input.validation-code {
   margin-bottom: 0;
 }
 
+.error-table .error-table-return-type {
+  position: relative;
+}
+
+.error-table .error-table-return-type ul li a {
+  position: absolute;
+  right: 0;
+  background: #fff;
+}
+
 .error-table .units p.heading-small {
   font-size: 14px;
   padding: 0.375em 0.625em 0.3125em 0;

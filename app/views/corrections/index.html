@@ -25,6 +25,7 @@
 		  sessionStorage.removeItem('parameter');
 		}
 	</script>
+<script src="/public/javascripts/clipboard.min.js"></script>
 
 </header>
 
@@ -68,24 +69,72 @@
 						  <summary><span class="summary">What return types are applicable to this permit?</span></summary>
 						  <div class="panel-indent">
 						  	<ul class="list list-bullet">
-									<li>EPR/IED self monitoring periodic Air (point source) emissions return</li>
-									<li>EPR/IED self monitoring periodic Air (ambient) monitoring return</li>
-									<li>EPR/IED self monitoring periodic Leachate level return</li>
-									<li>EPR/IED self monitoring periodic Leachate quality return</li>
-									<li>EPR/IED self monitoring periodic Surface Water emissions return</li>
-									<li>EPR/IED self monitoring periodic Groundwater quality/level return</li>
-									<li>EPR/IED self monitoring periodic Landfill Gas surface emissions return</li>
-									<li>EPR/IED self monitoring periodic Landfill Gas surface water quality return</li>
-									<li>EPR/IED self monitoring periodic Landfill Gas perimeter monitoring return</li>
-									<li>EPR/IED self monitoring periodic Landfill Gas in waste monitoring return</li>
-									<li>EPR/IED self monitoring periodic Landfill Gas infrastructure monitoring return</li>
-									<li>EPR/IED self monitoring periodic Sewer, ETP or Tankering emissions return</li>
-									<li>EPR/IED self monitoring periodic leachate production/treatment</li>
-									<li>EPR/IED self monitoring periodic landfill gas production/treatment</li>
-									<li>EPR/IED schedule 5/6 incident report</li>
-									<li>EPR/IED Landfill Annual Report</li>
-						    </ul>
-						    <p><a href="#">See the full guidance on return type</a>.</p>
+						  		<li>
+						  			<span id="return-type-01">EPR/IED self monitoring periodic Air (point source) emissions return</span>
+						  			<a id="copy-button-01" data-clipboard-target="#return-type-01">Copy to clipboard</a>
+						  		</li>
+						  		<li>
+						  			<span id="return-type-02">EPR/IED self monitoring periodic Air (ambient) monitoring return</span>
+						  			<a id="copy-button-02" data-clipboard-target="#return-type-02">Copy to clipboard</a>
+						  		</li>
+						  		<li>
+						  			<span id="return-type-03">EPR/IED self monitoring periodic Leachate level return</span>
+						  			<a id="copy-button-03" data-clipboard-target="#return-type-03">Copy to clipboard</a>
+						  		</li>
+						  		<li>
+						  			<span id="return-type-04">EPR/IED self monitoring periodic Leachate quality return</span>
+						  			<a id="copy-button-04" data-clipboard-target="#return-type-04">Copy to clipboard</a>
+						  		</li>
+						  		<li>
+						  			<span id="return-type-05">EPR/IED self monitoring periodic Surface Water emissions return</span>
+						  			<a id="copy-button-05" data-clipboard-target="#return-type-05">Copy to clipboard</a>
+						  		</li>
+						  		<li>
+						  			<span id="return-type-06">EPR/IED self monitoring periodic Groundwater quality/level return</span>
+						  			<a id="copy-button-06" data-clipboard-target="#return-type-06">Copy to clipboard</a>
+						  		</li>
+						  		<li>
+						  			<span id="return-type-07">EPR/IED self monitoring periodic Landfill Gas surface emissions return</span>
+						  			<a id="copy-button-07" data-clipboard-target="#return-type-07">Copy to clipboard</a>
+						  		</li>
+						  		<li>
+						  			<span id="return-type-08">EPR/IED self monitoring periodic Landfill Gas surface water quality return</span>
+						  			<a id="copy-button-08" data-clipboard-target="#return-type-08">Copy to clipboard</a>
+						  		</li>
+						  		<li>
+						  			<span id="return-type-09">EPR/IED self monitoring periodic Landfill Gas perimeter monitoring return</span>
+						  			<a id="copy-button-09" data-clipboard-target="#return-type-09">Copy to clipboard</a>
+						  		</li>
+						  		<li>
+						  			<span id="return-type-10">EPR/IED self monitoring periodic Landfill Gas in waste monitoring return</span>
+						  			<a id="copy-button-10" data-clipboard-target="#return-type-10">Copy to clipboard</a>
+						  		</li>
+						  		<li>
+						  			<span id="return-type-11">EPR/IED self monitoring periodic Landfill Gas infrastructure monitoring return</span>
+						  			<a id="copy-button-11" data-clipboard-target="#return-type-11">Copy to clipboard</a>
+						  		</li>
+						  		<li>
+						  			<span id="return-type-12">EPR/IED self monitoring periodic Sewer, ETP or Tankering emissions return</span>
+						  			<a id="copy-button-12" data-clipboard-target="#return-type-12">Copy to clipboard</a>
+						  		</li>
+						  		<li>
+						  			<span id="return-type-13">EPR/IED self monitoring periodic leachate production/treatment</span>
+						  			<a id="copy-button-13" data-clipboard-target="#return-type-13">Copy to clipboard</a>
+						  		</li>
+						  		<li>
+						  			<span id="return-type-14">EPR/IED self monitoring periodic landfill gas production/treatment</span>
+						  			<a id="copy-button-14" data-clipboard-target="#return-type-14">Copy to clipboard</a>
+						  		</li>
+						  		<li>
+						  			<span id="return-type-15">EPR/IED schedule 5/6 incident report</span>
+						  			<a id="copy-button-15" data-clipboard-target="#return-type-15">Copy to clipboard</a>
+						  		</li>
+						  		<li>
+						  			<span id="return-type-16">EPR/IED Landfill Annual Report</span>
+						  			<a id="copy-button-16" data-clipboard-target="#return-type-16">Copy to clipboard</a>
+						  		</li>
+						  	</ul>
+						  	<p><a href="#">See the full guidance on return type</a>.</p>
 						  </div>
 						</details>
 					
@@ -653,6 +702,26 @@
 	    $buttons.removeClass('active');
 	    $(this).addClass('active');
 	  })
+  </script>	 
+  
+  <script type="text/javascript">
+	  (function(){
+	      new Clipboard('#copy-button-01');
+	      new Clipboard('#copy-button-02');
+        new Clipboard('#copy-button-03');
+        new Clipboard('#copy-button-04');
+        new Clipboard('#copy-button-05');
+        new Clipboard('#copy-button-06');
+        new Clipboard('#copy-button-07');
+        new Clipboard('#copy-button-08');
+        new Clipboard('#copy-button-09');
+        new Clipboard('#copy-button-10');
+        new Clipboard('#copy-button-11');
+        new Clipboard('#copy-button-12');
+        new Clipboard('#copy-button-13');
+        new Clipboard('#copy-button-14');
+        new Clipboard('#copy-button-15');
+	  })();
   </script>	 
   
 </main> 
