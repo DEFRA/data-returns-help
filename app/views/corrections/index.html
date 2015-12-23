@@ -8,41 +8,6 @@
 
 <header class="page-header">
 
-<style>
- .ui-autocomplete {
-      padding: 0;
-      list-style: none;
-      background-color: #fff;
-      width: 15em;
-      border-left: 1px solid #BFC1C3;
-      border-right: 1px solid #BFC1C3;
-      max-height: 190px;
-      overflow-x: hidden;
-    }
-    .ui-autocomplete-input {
-      padding: .5em;
-    }
-    .ui-autocomplete .ui-menu-item {
-      display: block;
-      font-size: 1.2em;
-      padding: .5em;
-      color: #353D44;
-      cursor: pointer;
-    }
-    .ui-autocomplete .ui-menu-item:first-child {
-      border-top: none;
-    }
-    .ui-autocomplete .ui-menu-item.ui-state-focus {
-      color: #fff;
-      background-color: #0097cf;
-    }
-  .ui-helper-hidden-accessible { display:none; }
-  .ui-autocomplete {
-    position: absolute;
-    border-bottom: 1px solid #BFC1C3;
-  }
-</style>
-
 <script src="/public/javascripts/jquery-1.11.1.min.js"></script>
 <script src="/public/javascripts/jquery-ui.min.js"></script>
 <script src="/public/javascripts/jquery.select-to-autocomplete.js"></script>
@@ -86,9 +51,9 @@
 				<thead>
 				<tr>
 					<th width="5%">Row</th>
-					<th width="15%">Column</th>
-					<th width="20%">Error</th>
-					<th width="60%">How to fix it</th>
+					<th width="10%">Column</th>
+					<th width="15%">Error</th>
+					<th width="70%">How to fix it</th>
 				</tr>
 				</thead>
 				<tbody>
@@ -198,440 +163,441 @@
 					<td>
 						<p>You must give a unit for your measurements. See Table 1: Simple Units and Measures or Table 2: Composite Units and Measures for allowable units. Enter the data type exactly as it’s given in this list.</p>
 						
-						<div class="corrections">
-							<details class="corrections-table-return-type">
+						<div class="units">
+							<details class="corrections-table-units">
 							  <summary><span class="summary">What units are allowable?</span></summary>
 							  <div class="panel-indent">
-							  	Measure type
 									<div class="grid-row">
-										<div class="column-third">
-											<ul class="measure-type">
-												<li><a class="active btn" id="all">Show all</a></li>
-												<li><a class="btn" id="a">Concentration (Mass/Mass)</a></li>
-												<li><a class="btn" id="b">Concentration (Mass/Volume)</a></li>
-												<li><a class="btn" id="c">Concentration (Mass/Area)</a></li>
-												<li><a class="btn" id="d">Concentration (Volume/Volume)</a></li>
-												<li><a class="btn" id="e">Flow (Mass/Time)</a></li>
-												<li><a class="btn" id="f">Flow (Volume/Time)</a></li>
-												<li><a class="btn" id="g">Speed (Length/Time)</a></li>
-												<li><a class="btn" id="h">Radioactivity</a></li>
-												<li><a class="btn" id="i">Electrical Flow</a></li>
-											</ul>
-										</div>
-										<div class="column-two-thirds">
-											<table>
-									  		<thead>
-									  			<tr>
-									  				<td class="unit">Unit</td>
-									  				<td class="description">Description</td>
-									  			</tr>
-									  		</thead>
-									  		<tbody id="parent">
-									  			<tr class="box a">
-									  				<td>ug/kg</td>
-									  				<td>Microgram per Kilogram</td>
-									  			</tr>
-									  			<tr class="box a">
-									  				<td>mg/kg</td>
-									  				<td>Milligram per Kilogram</tr>
-									  			<tr class="box a">
-									  				<td>g/t</td>
-									  				<td>Gram per Tonne</td>
-									  			</tr>
-									  			<tr class="box b">
-									  				<td>ug/l</td>
-									  				<td>Microgram per Litre</td>
-									  			</tr>
-									  			<tr class="box b">
-									  				<td>mg/l</td>
-									  				<td>Milligram per Litre</td>
-									  			</tr>
-									  			<tr class="box b">
-									  				<td>g/l</td>
-									  				<td>Gram per Litre</td>
-									  			</tr>
-									  			<tr class="box b">
-									  				<td>kg/l</td>
-									  				<td>Kilogram per Litre</td>
-									  			</tr>
-									  			<tr class="box b">
-									  				<td>ug/m3</td>
-									  				<td>Microgram per Cubic metre</td>
-									  			</tr>
-									  			<tr class="box b">
-									  				<td>mg/m3</td>
-									  				<td>Milligram per Cubic metre</td>
-									  			</tr>
-									  			<tr class="box b">
-									  				<td>g/m3</td>
-									  				<td>Gram per Cubic metre</td>
-									  			</tr>
-									  			<tr class="box b">
-									  				<td>kg/m3</td>
-									  				<td>Kilogram per Cubic metre</td>
-									  			</tr>
-									  			<tr class="box c">
-									  				<td>ug/m2</td>
-									  				<td>Microgram per Square metre</td>
-									  			</tr>
-									  			<tr class="box c">
-									  				<td>mg/m2</td>
-									  				<td>Milligram per Square metre</td>
-									  			</tr>
-									  			<tr class="box c">
-									  				<td>g/m2</td>
-									  				<td>Gram per Square metre</td>
-									  			</tr>
-									  			<tr class="box c">
-									  				<td>kg/m2</td>
-									  				<td>Kilogram per Square metre</td>
-									  			</tr>
-									  			<tr class="box d">
-									  				<td>% v/v</td>
-									  				<td>Percentage volume for volume</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>ug/s</td>
-									  				<td>Microgram per Second</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>mg/s</td>
-									  				<td>Milligram per Second</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>g/s</td>
-									  				<td>Gram per Second</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>kg/s</td>
-									  				<td>Kilogram per Second</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>mg/min</td>
-									  				<td>Milligram per Minute</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>g/min</td>
-									  				<td>Gram per Minute</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>kg/min</td>
-									  				<td>Kilogram per Minute</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>t/min</td>
-									  				<td>Tonne per Minute</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>ug/hr</td>
-									  				<td>Microgram per Hour</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>mg/hr</td>
-									  				<td>Milligram per Hour</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>g/hr</td>
-									  				<td>Gram per Hour</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>kg/hr</td>
-									  				<td>Kilogram per Hour</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>t/hr</td>
-									  				<td>Tonne per Hour</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>ug/day</td>
-									  				<td>Microgram per Day</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>mg/day</td>
-									  				<td>Milligram per Day</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>g/day</td>
-									  				<td>Gram per Day</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>kg/day</td>
-									  				<td>Kilogram per Day</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>t/day</td>
-									  				<td>Tonne per Day</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>ug/wk</td>
-									  				<td>Microgram per Week</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>mg/wk</td>
-									  				<td>Milligram per Week</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>g/wk</td>
-									  				<td>Gram per Week</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>kg/wk</td>
-									  				<td>Kilogram per Week</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>t/wk</td>
-									  				<td>Tonne per Week</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>kg/yr</td>
-									  				<td>Kilogram per Year</td>
-									  			</tr>
-									  			<tr class="box e">
-									  				<td>t/yr</td>
-									  				<td>Tonne per Year</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>mm3/s</td>
-									  				<td>Cubic millimetre per Second</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>cm3/s</td>
-									  				<td>Cubic centimetre per Second</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>m3/s</td>
-									  				<td>Cubic metre per Second</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>ul/s</td>
-									  				<td>Microlitre per Second</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>ml/s</td>
-									  				<td>Millilitre per Second</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>l/s</td>
-									  				<td>Litre per Second</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>mm3/min</td>
-									  				<td>Cubic millimetre per Minute</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>cm3/min</td>
-									  				<td>Cubic centimetre per Minute</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>m3/min</td>
-									  				<td>Cubic metre per Minute</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>ul/min</td>
-									  				<td>Microlitre per Minute</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>ml/min</td>
-									  				<td>Millilitre per Minute</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>l/min</td>
-									  				<td>Litre per Minute</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>cm3/hr</td>
-									  				<td>Cubic centimetre per Hour</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>m3/hr</td>
-									  				<td>Cubic metre per Hour</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>ul/hr</td>
-									  				<td>Microlitre per Hour</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>ml/hr</td>
-									  				<td>Millilitre per Hour</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>l/hr</td>
-									  				<td>Litre per Hour</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>mm3/day</td>
-									  				<td>Cubic millimetre per Day</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>cm3/day</td>
-									  				<td>Cubic centimetre per Day</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>m3/day</td>
-									  				<td>Cubic metre per Day</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>ul/day</td>
-									  				<td>Microlitre per Day</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>ml/day</td>
-									  				<td>Millilitre per Day</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>l/day</td>
-									  				<td>Litre per Day</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>mm3/wk</td>
-									  				<td>Cubic millimetre per Week</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>cm3/wk</td>
-									  				<td>Cubic centimetre per Week</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>m3/wk</td>
-									  				<td>Cubic metre per Week</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>ul/wk</td>
-									  				<td>Microlitre per Week</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>ml/wk</td>
-									  				<td>Millilitre per Week</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>l/wk</td>
-									  				<td>Litre per Week</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>m3/yr</td>
-									  				<td>Cubic metre per Year</td>
-									  			</tr>
-									  			<tr class="box f">
-									  				<td>l/yr</td>
-									  				<td>Litre per Year</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>cm/s</td>
-									  				<td>Centimetre per Second</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>m/s</td>
-									  				<td>Metre per Second</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>cm/min</td>
-									  				<td>Centimetre per Minute</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>m/min</td>
-									  				<td>Metre per Minute</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>cm/hr</td>
-									  				<td>Centimetre per Hour</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>m/hr</td>
-									  				<td>Metre per Hour</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>km/hr</td>
-									  				<td>Kilometre per Hour</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>cm/day</td>
-									  				<td>Centimetre per Day</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>m/day</td>
-									  				<td>Metre per Day</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>km/day</td>
-									  				<td>Kilometre per Day</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>cm/wk</td>
-									  				<td>Centimetre per Week</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>m/wk</td>
-									  				<td>Metre per Week</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>km/wk</td>
-									  				<td>Kilometre per Week</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>cm/mth</td>
-									  				<td>Centimetre per Month</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>m/mth</td>
-									  				<td>Metre per Month</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>cm/yr</td>
-									  				<td>Centimetre per Year</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>m/yr</td>
-									  				<td>Metre per Year</td>
-									  			</tr>
-									  			<tr class="box g">
-									  				<td>km/yr</td>
-									  				<td>Kilometre per Year</td>
-									  			</tr>
-									  			<tr class="box h">
-									  				<td>Bq/cm2</td>
-									  				<td>Becquerels per Square centimetre</td>
-									  			</tr>
-									  			<tr class="box h">
-									  				<td>Bq/m2</td>
-									  				<td>Becquerels per Square metre</td>
-									  			</tr>
-									  			<tr class="box a">
-									  				<td>Bq/cm3</td>
-									  				<td>Becquerels per Cubic centimetre</td>
-									  			</tr>
-									  			<tr class="box h">
-									  				<td>Bq/m3</td>
-									  				<td>Becquerels per Cubic metre</td>
-									  			</tr>
-									  			<tr class="box h">
-									  				<td>Bq/g</td>
-									  				<td>Becquerels per Gram</td>
-									  			</tr>
-									  			<tr class="box h">
-									  				<td>Bq/kg</td>
-									  				<td>Becquerels per Kilogram</td>
-									  			</tr>
-									  			<tr class="box h">
-									  				<td>Bq/l</td>
-									  				<td>Becquerels per Litre</td>
-									  			</tr>
-									  			<tr class="box i">
-									  				<td>kWh</td>
-									  				<td>Kilowatt Hour</td>
-									  			</tr>
-									  			<tr class="box i">
-									  				<td>MWh</td>
-									  				<td>Megawatt Hour</td>
-									  			</tr>
-									  			<tr class="box i">
-									  				<td>GWh</td>
-									  				<td>Gigawatt Hour</td>
-									  			</tr>
-									  		</tbody>
-									  	</table>
-									  </div><!-- column-two-thirds -->
-									  	
-								    <p><a href="#">See the full guidance on return type</a>.</p>
-								  </div>
+										<div class="column-half">
+											<div class="table-container">
+												<table>
+										  		<thead>
+										  			<tr>
+										  				<th class="heading-small unit">Unit</th>
+										  				<th class="heading-small description">Description</th>
+										  			</tr>
+										  		</thead>
+										  		<tbody id="parent">
+										  			<tr class="box a">
+										  				<td>ug/kg</td>
+										  				<td>Microgram per Kilogram</td>
+										  			</tr>
+										  			<tr class="box a">
+										  				<td>mg/kg</td>
+										  				<td>Milligram per Kilogram</tr>
+										  			<tr class="box a">
+										  				<td>g/t</td>
+										  				<td>Gram per Tonne</td>
+										  			</tr>
+										  			<tr class="box b">
+										  				<td>ug/l</td>
+										  				<td>Microgram per Litre</td>
+										  			</tr>
+										  			<tr class="box b">
+										  				<td>mg/l</td>
+										  				<td>Milligram per Litre</td>
+										  			</tr>
+										  			<tr class="box b">
+										  				<td>g/l</td>
+										  				<td>Gram per Litre</td>
+										  			</tr>
+										  			<tr class="box b">
+										  				<td>kg/l</td>
+										  				<td>Kilogram per Litre</td>
+										  			</tr>
+										  			<tr class="box b">
+										  				<td>ug/m3</td>
+										  				<td>Microgram per Cubic metre</td>
+										  			</tr>
+										  			<tr class="box b">
+										  				<td>mg/m3</td>
+										  				<td>Milligram per Cubic metre</td>
+										  			</tr>
+										  			<tr class="box b">
+										  				<td>g/m3</td>
+										  				<td>Gram per Cubic metre</td>
+										  			</tr>
+										  			<tr class="box b">
+										  				<td>kg/m3</td>
+										  				<td>Kilogram per Cubic metre</td>
+										  			</tr>
+										  			<tr class="box c">
+										  				<td>ug/m2</td>
+										  				<td>Microgram per Square metre</td>
+										  			</tr>
+										  			<tr class="box c">
+										  				<td>mg/m2</td>
+										  				<td>Milligram per Square metre</td>
+										  			</tr>
+										  			<tr class="box c">
+										  				<td>g/m2</td>
+										  				<td>Gram per Square metre</td>
+										  			</tr>
+										  			<tr class="box c">
+										  				<td>kg/m2</td>
+										  				<td>Kilogram per Square metre</td>
+										  			</tr>
+										  			<tr class="box d">
+										  				<td>% v/v</td>
+										  				<td>Percentage volume for volume</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>ug/s</td>
+										  				<td>Microgram per Second</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>mg/s</td>
+										  				<td>Milligram per Second</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>g/s</td>
+										  				<td>Gram per Second</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>kg/s</td>
+										  				<td>Kilogram per Second</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>mg/min</td>
+										  				<td>Milligram per Minute</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>g/min</td>
+										  				<td>Gram per Minute</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>kg/min</td>
+										  				<td>Kilogram per Minute</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>t/min</td>
+										  				<td>Tonne per Minute</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>ug/hr</td>
+										  				<td>Microgram per Hour</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>mg/hr</td>
+										  				<td>Milligram per Hour</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>g/hr</td>
+										  				<td>Gram per Hour</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>kg/hr</td>
+										  				<td>Kilogram per Hour</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>t/hr</td>
+										  				<td>Tonne per Hour</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>ug/day</td>
+										  				<td>Microgram per Day</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>mg/day</td>
+										  				<td>Milligram per Day</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>g/day</td>
+										  				<td>Gram per Day</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>kg/day</td>
+										  				<td>Kilogram per Day</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>t/day</td>
+										  				<td>Tonne per Day</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>ug/wk</td>
+										  				<td>Microgram per Week</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>mg/wk</td>
+										  				<td>Milligram per Week</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>g/wk</td>
+										  				<td>Gram per Week</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>kg/wk</td>
+										  				<td>Kilogram per Week</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>t/wk</td>
+										  				<td>Tonne per Week</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>kg/yr</td>
+										  				<td>Kilogram per Year</td>
+										  			</tr>
+										  			<tr class="box e">
+										  				<td>t/yr</td>
+										  				<td>Tonne per Year</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>mm3/s</td>
+										  				<td>Cubic millimetre per Second</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>cm3/s</td>
+										  				<td>Cubic centimetre per Second</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>m3/s</td>
+										  				<td>Cubic metre per Second</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>ul/s</td>
+										  				<td>Microlitre per Second</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>ml/s</td>
+										  				<td>Millilitre per Second</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>l/s</td>
+										  				<td>Litre per Second</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>mm3/min</td>
+										  				<td>Cubic millimetre per Minute</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>cm3/min</td>
+										  				<td>Cubic centimetre per Minute</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>m3/min</td>
+										  				<td>Cubic metre per Minute</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>ul/min</td>
+										  				<td>Microlitre per Minute</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>ml/min</td>
+										  				<td>Millilitre per Minute</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>l/min</td>
+										  				<td>Litre per Minute</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>cm3/hr</td>
+										  				<td>Cubic centimetre per Hour</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>m3/hr</td>
+										  				<td>Cubic metre per Hour</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>ul/hr</td>
+										  				<td>Microlitre per Hour</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>ml/hr</td>
+										  				<td>Millilitre per Hour</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>l/hr</td>
+										  				<td>Litre per Hour</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>mm3/day</td>
+										  				<td>Cubic millimetre per Day</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>cm3/day</td>
+										  				<td>Cubic centimetre per Day</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>m3/day</td>
+										  				<td>Cubic metre per Day</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>ul/day</td>
+										  				<td>Microlitre per Day</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>ml/day</td>
+										  				<td>Millilitre per Day</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>l/day</td>
+										  				<td>Litre per Day</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>mm3/wk</td>
+										  				<td>Cubic millimetre per Week</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>cm3/wk</td>
+										  				<td>Cubic centimetre per Week</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>m3/wk</td>
+										  				<td>Cubic metre per Week</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>ul/wk</td>
+										  				<td>Microlitre per Week</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>ml/wk</td>
+										  				<td>Millilitre per Week</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>l/wk</td>
+										  				<td>Litre per Week</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>m3/yr</td>
+										  				<td>Cubic metre per Year</td>
+										  			</tr>
+										  			<tr class="box f">
+										  				<td>l/yr</td>
+										  				<td>Litre per Year</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>cm/s</td>
+										  				<td>Centimetre per Second</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>m/s</td>
+										  				<td>Metre per Second</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>cm/min</td>
+										  				<td>Centimetre per Minute</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>m/min</td>
+										  				<td>Metre per Minute</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>cm/hr</td>
+										  				<td>Centimetre per Hour</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>m/hr</td>
+										  				<td>Metre per Hour</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>km/hr</td>
+										  				<td>Kilometre per Hour</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>cm/day</td>
+										  				<td>Centimetre per Day</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>m/day</td>
+										  				<td>Metre per Day</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>km/day</td>
+										  				<td>Kilometre per Day</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>cm/wk</td>
+										  				<td>Centimetre per Week</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>m/wk</td>
+										  				<td>Metre per Week</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>km/wk</td>
+										  				<td>Kilometre per Week</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>cm/mth</td>
+										  				<td>Centimetre per Month</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>m/mth</td>
+										  				<td>Metre per Month</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>cm/yr</td>
+										  				<td>Centimetre per Year</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>m/yr</td>
+										  				<td>Metre per Year</td>
+										  			</tr>
+										  			<tr class="box g">
+										  				<td>km/yr</td>
+										  				<td>Kilometre per Year</td>
+										  			</tr>
+										  			<tr class="box h">
+										  				<td>Bq/cm2</td>
+										  				<td>Becquerels per Square centimetre</td>
+										  			</tr>
+										  			<tr class="box h">
+										  				<td>Bq/m2</td>
+										  				<td>Becquerels per Square metre</td>
+										  			</tr>
+										  			<tr class="box h">
+										  				<td>Bq/cm3</td>
+										  				<td>Becquerels per Cubic centimetre</td>
+										  			</tr>
+										  			<tr class="box h">
+										  				<td>Bq/m3</td>
+										  				<td>Becquerels per Cubic metre</td>
+										  			</tr>
+										  			<tr class="box h">
+										  				<td>Bq/g</td>
+										  				<td>Becquerels per Gram</td>
+										  			</tr>
+										  			<tr class="box h">
+										  				<td>Bq/kg</td>
+										  				<td>Becquerels per Kilogram</td>
+										  			</tr>
+										  			<tr class="box h">
+										  				<td>Bq/l</td>
+										  				<td>Becquerels per Litre</td>
+										  			</tr>
+										  			<tr class="box i">
+										  				<td>kWh</td>
+										  				<td>Kilowatt Hour</td>
+										  			</tr>
+										  			<tr class="box i">
+										  				<td>MWh</td>
+										  				<td>Megawatt Hour</td>
+										  			</tr>
+										  			<tr class="box i">
+										  				<td>GWh</td>
+										  				<td>Gigawatt Hour</td>
+										  			</tr>
+										  		</tbody>
+										  	</table>
+										  </div><!-- table-container -->
+									  </div><!-- column-half -->
+								  	<div class="column-half">
+								  		<p class="heading-small">Filter by measure type</p>
+								  		<ul class="measure-type">
+								  			<li><button class="active button button-secondary" id="all">All measures</button></li>
+								  			<li><button class="button button-secondary" id="a">Concentration (Mass/Mass)</button></li>
+								  			<li><button class="button button-secondary" id="b">Concentration (Mass/Volume)</button></li>
+								  			<li><button class="button button-secondary" id="c">Concentration (Mass/Area)</button></li>
+								  			<li><button class="button button-secondary" id="d">Concentration (Volume/Volume)</button></li>
+								  			<li><button class="button button-secondary" id="e">Flow (Mass/Time)</button></li>
+								  			<li><button class="button button-secondary" id="f">Flow (Volume/Time)</button></li>
+								  			<li><button class="button button-secondary" id="g">Speed (Length/Time)</button></li>
+								  			<li><button class="button button-secondary" id="h">Radioactivity</button></li>
+								  			<li><button class="button button-secondary" id="i">Electrical Flow</button></li>
+								  		</ul>
+								  	</div>
+								  </div><!-- grid -->
+								  <p><a href="#">See the full guidance on return type</a>.</p>
 								</details>
 							</div><!-- corrections-table -->
 						</td>
@@ -677,14 +643,14 @@
   </script>	  
   
   <script type="text/javascript">
-	  var $btns = $('.btn').click(function() {
+	  var $buttons = $('.button').click(function() {
 	    if (this.id == 'all') {
 	      $('#parent > tr').fadeIn(450);
 	    } else {
 	      var $el = $('.' + this.id).fadeIn(450);
 	      $('#parent > tr').not($el).hide();
 	    }
-	    $btns.removeClass('active');
+	    $buttons.removeClass('active');
 	    $(this).addClass('active');
 	  })
   </script>	 
