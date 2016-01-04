@@ -2262,10 +2262,14 @@ input.validation-code {
   position: relative;
 }
 
-.error-table .error-table-return-type ul li a {
+.error-table .error-table-return-type ul li {
+  position: relative;
+}
+
+.error-table .error-table-return-type ul li button {
   position: absolute;
   right: 0;
-  background: #fff;
+  font-size: 12px;
 }
 
 .error-table .units p.heading-small {

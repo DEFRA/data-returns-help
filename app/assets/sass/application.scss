@@ -336,10 +336,11 @@ input.validation-code {
 		position:relative;
 		ul {
 			li {
-				a {
+				position:relative;
+				button {
 					position: absolute;
 					right: 0;
-					background:$white;
+					font-size: 12px;
 				}
 				span {
 				}
