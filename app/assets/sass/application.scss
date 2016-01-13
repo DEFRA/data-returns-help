@@ -233,7 +233,6 @@ input.validation-code {
   color: #161A1C;
 }
 
-
 /* Example CSV */
 .csv-explain {
 	.heading-medium span {
@@ -305,11 +304,6 @@ input.validation-code {
 
 .parameter-list {
 	.result {
-		height:200px;
-		overflow-y:auto;
-		width:50%;
-		border:1px solid $grey-1;
-		padding:5px;
 		.list {
 		}
 	}
@@ -332,6 +326,18 @@ input.validation-code {
   		}
   	}
 	}
+	/* Parameters */
+	.error-table-parameters {
+		.form-hint {
+			font-size:16px;
+		}
+		.list {
+			li {
+				line-height: 1.4em;
+			}
+		}
+	}
+	/* Return type */
 	.error-table-return-type {
 		position:relative;
 		ul {
@@ -341,18 +347,27 @@ input.validation-code {
 					position: absolute;
 					right: 0;
 					font-size: 12px;
+					margin-right:0;
 				}
 				span {
 				}
 			}
+			li.hover {
+				background:$grey-4;
+			}
 		}
 	}
-	.units {
-		p.heading-small {
-			font-size:14px;
+	/* Units */
+	.error-table-units {
+		.filter {
+			float:right;
+		}
+		.panel-indent .show-all {
+			margin-bottom: 36px;
+		}
+		h2.heading-small {
 			padding: em(6, 16) em(10, 16) em(5, 16) 0;
-			border-bottom: 1px solid $grey-2;
-			margin-bottom:0;
+			margin-top:0;
 		}
 		.table-container {
 		/*	height:200px; */
@@ -369,17 +384,17 @@ input.validation-code {
 				width:75%
 			}
     	th, td {
-    		font-size:14px;
     		padding: em(6, 16) em(10, 16) em(5, 16) 0;
     		}
     	
     	}
-		ul {
+		.measure-type {
 			li {
-				padding: em(6, 16) em(10, 16) em(5, 16) 0;
+				padding: em(6, 16) 0 em(5, 16) 0;
 				button {
 					font-size:14px !important;
 					text-align:left;
+					margin-bottom:0 !important;
 				}
 				.button-secondary {
 					@include button($grey-3);
@@ -389,7 +404,172 @@ input.validation-code {
 					}
 				}
 			}
+			li:first-child {
+				padding-top:15px;
+			}
 		}
 	}
 }
 
+
+// Responsive tabs
+
+/* REQUIRED for core functionality of tab.js */
+
+.responsive-tabs__heading {
+    display: none;
+}
+
+.responsive-tabs__list__item {
+    display: inline;
+    cursor:pointer;
+}
+
+@include media(mobile) {
+    .responsive-tabs__list {
+        display: none;
+    }
+    .responsive-tabs__heading {
+        display: block;
+        cursor: pointer;
+    }
+    .responsive-tabs__panel--closed-accordion-only {
+        display: none;
+    }
+}
+
+@include media(desktop) {
+.responsive-tabs__panel--closed-accordion-only {
+    display: block;
+    }
+}
+
+/* END - Required for core functionality of tab.js */
+
+// Tabs wrapper
+
+.responsive-tabs-wrapper {
+    clear: both;
+    zoom: 1;
+}
+
+.responsive-tabs-wrapper:before,
+.responsive-tabs-wrapper:after {
+    content: "";
+    display: table;
+}
+
+.responsive-tabs-wrapper:after {
+    clear: both;
+}
+
+// Tabs enabled
+
+.responsive-tabs__heading:focus,
+.responsive-tabs__list__item:focus {
+    outline: 3px solid $yellow;
+}
+
+.responsive-tabs__heading--active:focus,
+.responsive-tabs__list__item--active:focus {
+    outline: 3px solid $yellow;
+}
+
+ // Tabs desktop
+
+.responsive-tabs__list {
+    margin: 2em 0 0 0;
+    padding: 0;
+    border-bottom: 1px solid $grey-2;
+    padding-bottom: 19px;
+    font-size:16px;
+    line-height: 16px;
+}
+
+.responsive-tabs__list__item {
+    padding: 10px 20px;
+    margin-right: 0.3em;
+    border: 1px solid $grey-3;
+    border-collapse:collapse;
+    border-spacing:0;
+    background:$grey-3;
+    line-height:16px;
+    font-size:16px;
+    text-align:left;
+}
+
+.responsive-tabs__list__item:hover {
+    background: $grey-3;
+}
+
+.responsive-tabs__list__item--active,
+.responsive-tabs__list__item--active:hover {
+    background: $white;
+    border: 1px solid $grey-2;
+    border-bottom: 0;
+    color:$text-colour;
+    padding: 16px 20px 17px;
+}
+
+.responsive-tabs__panel {
+    margin-bottom: 1.05263em;
+}
+
+.responsive-tabs th p {
+    margin-right: $gutter-half;
+}
+
+.responsive-tabs td {
+    padding-right: 5px;
+}
+
+.back-to-top a {
+    float: right;
+    padding-bottom: $gutter-half;
+}
+
+
+ // Tabs mobile devices
+
+@include media(mobile) {
+    .responsive-tabs__heading {
+        padding: 0.5em;
+        border: 1px solid #ccc;
+        background: $grey-3;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+     // Tab arrows (mobile devices only)
+    .responsive-tabs__heading:after {
+        content:"";
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 40%;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #000;
+    }
+
+    .responsive-tabs__heading:hover,
+    .responsive-tabs__heading--active:hover {
+        background-color: $white;
+    }
+
+    .responsive-tabs__heading--active {
+        background: $page-colour;
+    }
+
+    .responsive-tabs__heading--active:after {
+        border-bottom: 10px solid #000;
+        border-top:0;
+    }
+
+    .responsive-tabs {
+        width: 100%;
+    }
+
+}
