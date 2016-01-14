@@ -2270,13 +2270,15 @@ input.validation-code {
 
 .error-table .error-table-return-type ul li {
   position: relative;
+  padding: 1px 0 2px;
 }
 
 .error-table .error-table-return-type ul li button {
   position: absolute;
   right: 0;
-  font-size: 12px;
+  font-size: 0.8em;
   margin-right: 0;
+  top: 0px;
 }
 
 .error-table .error-table-return-type ul li.hover {
@@ -2315,6 +2317,14 @@ input.validation-code {
 
 .error-table .error-table-units table th, .error-table .error-table-units table td {
   padding: 0.375em 0.625em 0.3125em 0;
+}
+
+.error-table .error-table-units table tr {
+  display: table-row;
+}
+
+.error-table .error-table-units table td {
+  display: table-cell;
 }
 
 .error-table .error-table-units .measure-type li {
@@ -2516,6 +2526,55 @@ input.validation-code {
   }
   .responsive-tabs__panel--closed-accordion-only {
     display: none;
+  }
+  .error-table-units .filter {
+    float: none;
+    width: 100%;
+  }
+  .responsive-stacked-table thead {
+    display: none;
+  }
+  .responsive-stacked-table tr,
+  .responsive-stacked-table th,
+  .responsive-stacked-table td {
+    display: block;
+    margin: 2px 0;
+  }
+  .responsive-stacked-table td {
+    border: none;
+  }
+  .responsive-stacked-table tr td:first-child {
+    border-top: 1px solid #000;
+    font-weight: bold;
+  }
+  .responsive-stacked-table tr td:first-child {
+    font-weight: 300;
+  }
+  .responsive-stacked-table td:before {
+    display: block;
+    font-weight: bold;
+  }
+  .responsive-stacked-table td:nth-of-type(1):before {
+    content: "Row:";
+  }
+  .responsive-stacked-table td:nth-of-type(2):before {
+    content: "Column:";
+  }
+  .responsive-stacked-table td:nth-of-type(3):before {
+    content: "Error:";
+  }
+  .responsive-stacked-table td:nth-of-type(4):before {
+    content: "How to fix it:";
+  }
+  .responsive-stacked-table td td,
+  .responsive-stacked-table td td:first-child {
+    border-top: 1px solid #bfc1c3;
+  }
+  .responsive-stacked-table td td:nth-of-type(1):before {
+    content: none;
+  }
+  .responsive-stacked-table td td:nth-of-type(2):before {
+    content: none;
   }
 }
 
