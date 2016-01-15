@@ -506,9 +506,18 @@ input.validation-code {
     	h3 {
     	  @include bold-19();
     	}
+    	h4, caption {
+    		@include bold-16();
+    	}
     	table {
     		margin-bottom:45px;
     		margin-top:15px;
+  			caption {
+  				text-align:left;
+  			}
+    		th, td {
+    			vertical-align:top;
+    		}
     	}
 	}
 }
