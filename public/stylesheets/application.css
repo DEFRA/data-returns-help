@@ -2506,6 +2506,134 @@ input.validation-code {
   padding-top: 15px;
 }
 
+.help .column-three-quarters {
+  float: left;
+  width: 75%;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.help .inner-block {
+  padding: 0 30px;
+}
+
+.help .heading {
+  padding: 45px 0;
+}
+
+.help .heading .type {
+  color: #6f777b;
+  margin-bottom: 0.2em;
+}
+
+.help .metadata-list {
+  display: block;
+  clear: both;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.help .metadata-list a {
+  text-decoration: none;
+}
+
+.help .metadata-list dl {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  text-transform: none;
+}
+
+.help .metadata-list dl dt {
+  min-width: 120px;
+  padding-right: 10px;
+  width: auto;
+  clear: left;
+  float: left;
+}
+
+.help .metadata-list dl dd {
+  width: 70%;
+  float: left;
+}
+
+.help .contextual-info {
+  padding-top: 5px;
+}
+
+.help .contextual-info h1 {
+  font-family: "nta",Arial,sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.31579;
+  padding-bottom: 3px;
+  padding-top: 7px;
+  text-transform: none;
+}
+
+.help .contextual-info ol {
+  border-top: 1px solid #bfc1c3;
+  font-family: "nta",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+}
+
+.help .contextual-info li {
+  list-style: outside none none;
+  margin-left: 0;
+  padding-top: 0;
+}
+
+.help .contextual-info li a {
+  border-bottom: 1px solid #bfc1c3;
+  display: block;
+  padding: 5px 0;
+}
+
+.help .summary {
+  padding-bottom: 45px;
+  padding-top: 15px;
+}
+
+.help .data-exchange-protocol h2 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: none;
+}
+
+@media (min-width: 641px) {
+  .help .data-exchange-protocol h2 {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+
+.help .data-exchange-protocol h3 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  text-transform: none;
+}
+
+@media (min-width: 641px) {
+  .help .data-exchange-protocol h3 {
+    font-size: 19px;
+    line-height: 1.3157894737;
+  }
+}
+
+.help .data-exchange-protocol table {
+  margin-bottom: 45px;
+  margin-top: 15px;
+}
+
 /* REQUIRED for core functionality of tab.js */
 .responsive-tabs__heading {
   display: none;

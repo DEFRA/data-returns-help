@@ -418,6 +418,102 @@ input.validation-code {
 	}
 }
 
+// Data exchange protocol
+
+.help {
+	.column-three-quarters {
+	    float: left;
+	    width: 75%;
+      box-sizing: border-box;
+      padding: 0 15px;
+	}
+	.inner-block {
+	    padding: 0 30px;
+	}
+	.heading {
+		padding: 45px 0;
+		.type {
+			color:$grey-1;
+			margin-bottom: 0.2em;
+		}
+	}
+	.metadata-list {
+		display: block;
+		clear:both;
+		margin-bottom: 30px;
+		overflow: hidden;
+		a {
+			text-decoration: none;
+		}
+		dl {
+			font-size: 14px;
+	    font-weight: 400;
+	    line-height: 1.42857;
+	    text-transform: none;
+			dt {
+			  min-width: 120px;
+			  padding-right: 10px;
+			  width: auto;
+			  clear: left;
+			  float: left;
+			}
+			dd {
+				width: 70%;
+				float: left;
+			}
+		}
+	}
+	.contextual-info {
+	    padding-top: 5px;
+	    h1 {
+	        font-family: "nta",Arial,sans-serif;
+	        font-size: 19px;
+	        font-weight: 400;
+	        line-height: 1.31579;
+	        padding-bottom: 3px;
+	        padding-top: 7px;
+	        text-transform: none;
+	    }
+	    ol {
+	        border-top: 1px solid #bfc1c3;
+	        font-family: "nta",Arial,sans-serif;
+	        font-size: 16px;
+	        font-weight: 400;
+	        line-height: 1.25;
+	        margin: 0;
+	        padding: 0;
+	        text-transform: none;
+	    }
+	    li {
+	        list-style: outside none none;
+	        margin-left: 0;
+	        padding-top: 0;
+	        a {
+	            border-bottom: 1px solid #bfc1c3;
+	            display: block;
+	            padding: 5px 0;
+	        }
+	    }
+    }
+    .summary {
+    	padding-bottom: 45px;
+    	padding-top: 15px;
+    }
+    .data-exchange-protocol {
+    	h2 {
+        @include bold-24();
+    	}
+    	h3 {
+    	  @include bold-19();
+    	}
+    	table {
+    		margin-bottom:45px;
+    		margin-top:15px;
+    	}
+	}
+}
+
+
 // Responsive tabs
 
 /* REQUIRED for core functionality of tab.js */
