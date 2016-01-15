@@ -2616,6 +2616,21 @@ input.validation-code {
 
 .help .data-exchange-protocol h3 {
   font-family: "nta", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: none;
+}
+
+@media (min-width: 641px) {
+  .help .data-exchange-protocol h3 {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+
+.help .data-exchange-protocol h4, .help .data-exchange-protocol caption {
+  font-family: "nta", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.25;
   font-weight: 700;
@@ -2623,24 +2638,9 @@ input.validation-code {
 }
 
 @media (min-width: 641px) {
-  .help .data-exchange-protocol h3 {
+  .help .data-exchange-protocol h4, .help .data-exchange-protocol caption {
     font-size: 19px;
     line-height: 1.3157894737;
-  }
-}
-
-.help .data-exchange-protocol h4, .help .data-exchange-protocol caption {
-  font-family: "nta", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.1428571429;
-  font-weight: 700;
-  text-transform: none;
-}
-
-@media (min-width: 641px) {
-  .help .data-exchange-protocol h4, .help .data-exchange-protocol caption {
-    font-size: 16px;
-    line-height: 1.25;
   }
 }
 
@@ -2650,7 +2650,19 @@ input.validation-code {
 }
 
 .help .data-exchange-protocol table caption {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  font-weight: 700;
+  text-transform: none;
   text-align: left;
+}
+
+@media (min-width: 641px) {
+  .help .data-exchange-protocol table caption {
+    font-size: 16px;
+    line-height: 1.25;
+  }
 }
 
 .help .data-exchange-protocol table th, .help .data-exchange-protocol table td {
