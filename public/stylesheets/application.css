@@ -2669,6 +2669,10 @@ input.validation-code {
   vertical-align: top;
 }
 
+.help .data-exchange-protocol .date-and-time th {
+  width: 25%;
+}
+
 /* REQUIRED for core functionality of tab.js */
 .responsive-tabs__heading {
   display: none;
