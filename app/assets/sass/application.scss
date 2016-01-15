@@ -509,6 +509,9 @@ input.validation-code {
     	h4, caption {
     	  @include bold-19();
     	}
+    	strong {
+    		font-weight:bold;
+    	}
     	table {
     		margin-bottom:45px;
     		margin-top:15px;
@@ -519,10 +522,18 @@ input.validation-code {
     		th, td {
     			vertical-align:top;
     		}
+    		td p:first-child {
+    			margin-top:0;
+    		}
     	}
     	.date-and-time {
     		th {
     			width:25%;
+    		}
+    		td {
+    			th {
+    				width:inherit;
+    			}
     		}
     	}
 	}

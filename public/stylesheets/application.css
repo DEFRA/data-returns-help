@@ -2644,6 +2644,10 @@ input.validation-code {
   }
 }
 
+.help .data-exchange-protocol strong {
+  font-weight: bold;
+}
+
 .help .data-exchange-protocol table {
   margin-bottom: 45px;
   margin-top: 15px;
@@ -2669,8 +2673,16 @@ input.validation-code {
   vertical-align: top;
 }
 
+.help .data-exchange-protocol table td p:first-child {
+  margin-top: 0;
+}
+
 .help .data-exchange-protocol .date-and-time th {
   width: 25%;
+}
+
+.help .data-exchange-protocol .date-and-time td th {
+  width: inherit;
 }
 
 /* REQUIRED for core functionality of tab.js */
