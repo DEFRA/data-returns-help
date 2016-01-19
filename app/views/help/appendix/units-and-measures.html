@@ -1,0 +1,861 @@
+uni{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<header class="page-header">
+
+<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+<script src="/public/javascripts/jquery-ui.min.js"></script>
+<script src="/public/javascripts/clipboard.min.js"></script>
+
+</header>
+
+<main id="content" role="main">
+
+<p>
+	<strong>Units: This data standard presents approved units and measures we may need in our work.</strong>
+</p>
+<p>Use of this data standard results in more consistent use of units and decreased instances of attribute and reporting inconsistencies and errors which promotes clarity and interoperability of our data and systems.</p>
+
+<h3 id="appendix-21">2.1 Units and Measures</h3>
+<p>These are the approved units and measures needed in our work.</p>
+<table>
+	<caption>Table 1: Simple Units and Measures</caption>
+	<tr>
+		<th>Measure Type</th>
+		<th>Unit</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>Mass</td>
+		<td>ug</td>
+		<td>Microgram</td>
+	</tr>
+	<tr>
+		<td>Mass</td>
+		<td>mg</td>
+		<td>Milligram</td>
+	</tr>
+	<tr>
+		<td>Mass</td>
+		<td>g</td>
+		<td>Gram</td>
+	</tr>
+	<tr>
+		<td>Mass</td>
+		<td>kg</td>
+		<td>Kilogram</td>
+	</tr>
+	<tr>
+		<td>Mass</td>
+		<td>t</td>
+		<td>Tonne</td>
+	</tr>
+	<tr>
+		<td>Mass</td>
+		<td>mol</td>
+		<td>mole, an amount of a substance</td>
+	</tr>
+	<tr>
+		<td>Length</td>
+		<td>mm</td>
+		<td>Millimetre</td>
+	</tr>
+	<tr>
+		<td>Length</td>
+		<td>cm</td>
+		<td>Centimetre</td>
+	</tr>
+	<tr>
+		<td>Length</td>
+		<td>m</td>
+		<td>Metre</td>
+	</tr>
+	<tr>
+		<td>Length</td>
+		<td>km</td>
+		<td>Kilometre</td>
+	</tr>
+	<tr>
+		<td>Area</td>
+		<td>mm2</td>
+		<td>Square millimetre</td>
+	</tr>
+	<tr>
+		<td>Area</td>
+		<td>cm2</td>
+		<td>Square centimetre</td>
+	</tr>
+	<tr>
+		<td>Area</td>
+		<td>m2</td>
+		<td>Square metre</td>
+	</tr>
+	<tr>
+		<td>Area</td>
+		<td>km2</td>
+		<td>Square kilometre</td>
+	</tr>
+	<tr>
+		<td>Area</td>
+		<td>Ha</td>
+		<td>Hectare</td>
+	</tr>
+	<tr>
+		<td>Volume</td>
+		<td>mm3</td>
+		<td>Cubic millimetre</td>
+	</tr>
+	<tr>
+		<td>Volume</td>
+		<td>cm3</td>
+		<td>Cubic centimetre</td>
+	</tr>
+	<tr>
+		<td>Volume</td>
+		<td>m3</td>
+		<td>Cubic metre</td>
+	</tr>
+	<tr>
+		<td>Volume</td>
+		<td>ul</td>
+		<td>Microlitre</td>
+	</tr>
+	<tr>
+		<td>Volume</td>
+		<td>ml</td>
+		<td>Millilitre</td>
+	</tr>
+	<tr>
+		<td>Volume</td>
+		<td>l</td>
+		<td>Litre</td>
+	</tr>
+	<tr>
+		<td>Time</td>
+		<td>s</td>
+		<td>Second</td>
+	</tr>
+	<tr>
+		<td>Time</td>
+		<td>min</td>
+		<td>Minute</td>
+	</tr>
+	<tr>
+		<td>Time</td>
+		<td>hr</td>
+		<td>Hour</td>
+	</tr>
+	<tr>
+		<td>Time</td>
+		<td>day</td>
+		<td>Day</td>
+	</tr>
+	<tr>
+		<td>Time</td>
+		<td>wk</td>
+		<td>Week</td>
+	</tr>
+	<tr>
+		<td>Time</td>
+		<td>mth</td>
+		<td>Month</td>
+	</tr>
+	<tr>
+		<td>Time</td>
+		<td>qrt</td>
+		<td>Quarter</td>
+	</tr>
+	<tr>
+		<td>Time</td>
+		<td>yr</td>
+		<td>Year</td>
+	</tr>
+	<tr>
+		<td>Energy and Power</td>
+		<td>J</td>
+		<td>Joule</td>
+	</tr>
+	<tr>
+		<td>Energy and Power</td>
+		<td>kJ</td>
+		<td>Kilojoule</td>
+	</tr>
+	<tr>
+		<td>Energy and Power</td>
+		<td>MJ</td>
+		<td>Megajoule</td>
+	</tr>
+	<tr>
+		<td>Energy and Power</td>
+		<td>TJ</td>
+		<td>Terrajoule</td>
+	</tr>
+	<tr>
+		<td>Energy and Power</td>
+		<td>W</td>
+		<td>Watt</td>
+	</tr>
+	<tr>
+		<td>Energy and Power</td>
+		<td>kW</td>
+		<td>Kilowatt</td>
+	</tr>
+	<tr>
+		<td>Energy and Power</td>
+		<td>MW</td>
+		<td>Megawatt</td>
+	</tr>
+	<tr>
+		<td>Energy and Power</td>
+		<td>GW</td>
+		<td>Gigawatt</td>
+	</tr>
+	<tr>
+		<td>Energy and Power</td>
+		<td>TW</td>
+		<td>Terrawatt</td>
+	</tr>
+	<tr>
+		<td>Electricity</td>
+		<td>mV</td>
+		<td>Millivolt</td>
+	</tr>
+	<tr>
+		<td>Electricity</td>
+		<td>V</td>
+		<td>Volt</td>
+	</tr>
+	<tr>
+		<td>Electricity</td>
+		<td>kV</td>
+		<td>Kilovolt</td>
+	</tr>
+	<tr>
+		<td>Electricity</td>
+		<td>MV</td>
+		<td>Megavolt</td>
+	</tr>
+	<tr>
+		<td>Electricity</td>
+		<td>mA</td>
+		<td>Milliamp</td>
+	</tr>
+	<tr>
+		<td>Electricity</td>
+		<td>A</td>
+		<td>Amp</td>
+	</tr>
+	<tr>
+		<td>Electricity</td>
+		<td>kA</td>
+		<td>Kiloamp</td>
+	</tr>
+	<tr>
+		<td>Electromagnetic Radiation</td>
+		<td>Hz</td>
+		<td>Hertz</td>
+	</tr>
+	<tr>
+		<td>Electromagnetic Radiation</td>
+		<td>kHz</td>
+		<td>Kilohertz</td>
+	</tr>
+	<tr>
+		<td>Electromagnetic Radiation</td>
+		<td>MHz</td>
+		<td>Megahertz</td>
+	</tr>
+	<tr>
+		<td>Radioactive Decay</td>
+		<td>Bq</td>
+		<td>Becquerels</td>
+	</tr>
+	<tr>
+		<td>Temperature</td>
+		<td>ºC</td>
+		<td>degrees Celsius</td>
+	</tr>
+	<tr>
+		<td>Temperature</td>
+		<td>DegC</td>
+		<td>degrees Celsius</td>
+	</tr>
+	<tr>
+		<td>Pressure</td>
+		<td>Pa</td>
+		<td>Pascal, unit of pressure</td>
+	</tr>
+	<tr>
+		<td>Pressure</td>
+		<td>mBar</td>
+		<td>Millibar</td>
+	</tr>
+	<tr>
+		<td>Pressure</td>
+		<td>Bar</td>
+		<td>Bar</td>
+	</tr>
+	<tr>
+		<td>Miscellaneous</td>
+		<td>pH</td>
+		<td>Acidity measure</td>
+	</tr>
+	<tr>
+		<td>Miscellaneous</td>
+		<td>%</td>
+		<td>Percentage, a number expressed as a fraction of 100</td>
+	</tr>
+	<tr>
+		<td>Miscellaneous</td>
+		<td>Hazen</td>
+		<td>Hazen</td>
+	</tr>
+	<tr>
+		<td>Miscellaneous</td>
+		<td>ppm</td>
+		<td>Parts per million</td>
+	</tr>
+	<tr>
+		<td>Miscellaneous</td>
+		<td>ppb</td>
+		<td>Parts per billion</td>
+	</tr>
+	<tr>
+		<td>Miscellaneous</td>
+		<td>95%ile</td>
+		<td>95 Percentile</td>
+	</tr>
+	<tr>
+		<td>Miscellaneous</td>
+		<td>FTU</td>
+		<td>Formazin Turbidity Unit</td>
+	</tr>
+</table>
+<h4>Composite Units and Measures</h4>
+<table>
+	<caption>Table 2: Composite Units and Measures</caption>
+	<tr>
+		<th>Measure Type</th>
+		<th colspan="2">Unit</th>
+		<th colspan="2">Description</th>
+	</tr>
+	<tr>
+		<td colspan="2">Concentration (Mass/Mass)</td>
+		<td colspan="2">ug/kg</td>
+		<td>Microgram per Kilogram</td>
+	</tr>
+	<tr>
+		<td colspan="2">Concentration (Mass/Mass)</td>
+		<td colspan="2">mg/kg</td>
+		<td>Milligram per Kilogram</td>
+	</tr>
+	<tr>
+		<td colspan="2">Concentration (Mass/Mass)</td>
+		<td colspan="2">g/t</td>
+		<td>Gram per Tonne</td>
+	</tr>
+	<tr>
+		<td colspan="2">Concentration (Mass/Volume)</td>
+		<td colspan="2">ug/l</td>
+		<td>Microgram per Litre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Concentration (Mass/Volume)</td>
+		<td colspan="2">mg/l</td>
+		<td>Milligram per Litre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Concentration (Mass/Volume)</td>
+		<td colspan="2">g/l</td>
+		<td>Gram per Litre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Concentration (Mass/Volume)</td>
+		<td colspan="2">kg/l</td>
+		<td>Kilogram per Litre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Concentration (Mass/Volume)</td>
+		<td colspan="2">ug/m3</td>
+		<td>Microgram per Cubic metre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Concentration (Mass/Volume)</td>
+		<td colspan="2">mg/m3</td>
+		<td>Milligram per Cubic metre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Concentration (Mass/Volume)</td>
+		<td colspan="2">g/m3</td>
+		<td>Gram per Cubic metre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Concentration (Mass/Volume)</td>
+		<td colspan="2">kg/m3</td>
+		<td>Kilogram per Cubic metre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Concentration (Mass/Area)</td>
+		<td colspan="2">ug/m2</td>
+		<td>Microgram per Square metre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Concentration (Mass/Area)</td>
+		<td colspan="2">mg/m2</td>
+		<td>Milligram per Square metre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Concentration (Mass/Area)</td>
+		<td colspan="2">g/m2</td>
+		<td>Gram per Square metre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Concentration (Mass/Area)</td>
+		<td colspan="2">kg/m2</td>
+		<td>Kilogram per Square metre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Concentration (Volume/Volume)</td>
+		<td colspan="2">% v/v</td>
+		<td>Percentage volume for volume</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">ug/s</td>
+		<td>Microgram per Second</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">mg/s</td>
+		<td>Milligram per Second</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">g/s</td>
+		<td>Gram per Second</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">kg/s</td>
+		<td>Kilogram per Second</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">mg/min</td>
+		<td>Milligram per Minute</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">g/min</td>
+		<td>Gram per Minute</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">kg/min</td>
+		<td>Kilogram per Minute</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">t/min</td>
+		<td>Tonne per Minute</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">ug/hr</td>
+		<td>Microgram per Hour</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">mg/hr</td>
+		<td>Milligram per Hour</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">g/hr</td>
+		<td>Gram per Hour</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">kg/hr</td>
+		<td>Kilogram per Hour</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">t/hr</td>
+		<td>Tonne per Hour</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">ug/day</td>
+		<td>Microgram per Day</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">mg/day</td>
+		<td>Milligram per Day</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">g/day</td>
+		<td>Gram per Day</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">kg/day</td>
+		<td>Kilogram per Day</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">t/day</td>
+		<td>Tonne per Day</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">ug/wk</td>
+		<td>Microgram per Week</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">mg/wk</td>
+		<td>Milligram per Week</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">g/wk</td>
+		<td>Gram per Week</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">kg/wk</td>
+		<td>Kilogram per Week</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">t/wk</td>
+		<td>Tonne per Week</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">kg/yr</td>
+		<td>Kilogram per Year</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Mass/Time)</td>
+		<td colspan="2">t/yr</td>
+		<td>Tonne per Year</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">mm3/s</td>
+		<td>Cubic millimetre per Second</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">cm3/s</td>
+		<td>Cubic centimetre per Second</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">m3/s</td>
+		<td>Cubic metre per Second</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">ul/s</td>
+		<td>Microlitre per Second</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">ml/s</td>
+		<td>Millilitre per Second</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">l/s</td>
+		<td>Litre per Second</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">mm3/min</td>
+		<td>Cubic millimetre per Minute</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">cm3/min</td>
+		<td>Cubic centimetre per Minute</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">m3/min</td>
+		<td>Cubic metre per Minute</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">ul/min</td>
+		<td>Microlitre per Minute</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">ml/min</td>
+		<td>Millilitre per Minute</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">l/min</td>
+		<td>Litre per Minute</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">cm3/hr</td>
+		<td>Cubic centimetre per Hour</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">m3/hr</td>
+		<td>Cubic metre per Hour</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">ul/hr</td>
+		<td>Microlitre per Hour</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">ml/hr</td>
+		<td>Millilitre per Hour</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">l/hr</td>
+		<td>Litre per Hour</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">mm3/day</td>
+		<td>Cubic millimetre per Day</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">cm3/day</td>
+		<td>Cubic centimetre per Day</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">m3/day</td>
+		<td>Cubic metre per Day</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">ul/day</td>
+		<td>Microlitre per Day</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">ml/day</td>
+		<td>Millilitre per Day</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">l/day</td>
+		<td>Litre per Day</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">mm3/wk</td>
+		<td>Cubic millimetre per Week</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">cm3/wk</td>
+		<td>Cubic centimetre per Week</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">m3/wk</td>
+		<td>Cubic metre per Week</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">ul/wk</td>
+		<td>Microlitre per Week</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">ml/wk</td>
+		<td>Millilitre per Week</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">l/wk</td>
+		<td>Litre per Week</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">m3/yr</td>
+		<td>Cubic metre per Year</td>
+	</tr>
+	<tr>
+		<td colspan="2">Flow (Volume/Time)</td>
+		<td colspan="2">l/yr</td>
+		<td>Litre per Year</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">cm/s</td>
+		<td>Centimetre per Second</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">m/s</td>
+		<td>Metre per Second</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">cm/min</td>
+		<td>Centimetre per Minute</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">m/min</td>
+		<td>Metre per Minute</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">cm/hr</td>
+		<td>Centimetre per Hour</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">m/hr</td>
+		<td>Metre per Hour</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">km/hr</td>
+		<td>Kilometre per Hour</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">cm/day</td>
+		<td>Centimetre per Day</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">m/day</td>
+		<td>Metre per Day</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">km/day</td>
+		<td>Kilometre per Day</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">cm/wk</td>
+		<td>Centimetre per Week</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">m/wk</td>
+		<td>Metre per Week</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">km/wk</td>
+		<td>Kilometre per Week</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">cm/mth</td>
+		<td>Centimetre per Month</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">m/mth</td>
+		<td>Metre per Month</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">cm/yr</td>
+		<td>Centimetre per Year</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">m/yr</td>
+		<td>Metre per Year</td>
+	</tr>
+	<tr>
+		<td colspan="2">Speed (Length/Time)</td>
+		<td colspan="2">km/yr</td>
+		<td>Kilometre per Year</td>
+	</tr>
+	<tr>
+		<td colspan="2">Radioactivity</td>
+		<td colspan="2">Bq/cm2</td>
+		<td>Becquerels per Square centimetre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Radioactivity</td>
+		<td colspan="2">Bq/m2</td>
+		<td>Becquerels per Square metre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Radioactivity</td>
+		<td colspan="2">Bq/cm3</td>
+		<td>Becquerels per Cubic centimetre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Radioactivity</td>
+		<td colspan="2">Bq/m3</td>
+		<td>Becquerels per Cubic metre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Radioactivity</td>
+		<td colspan="2">Bq/g</td>
+		<td>Becquerels per Gram</td>
+	</tr>
+	<tr>
+		<td colspan="2">Radioactivity</td>
+		<td colspan="2">Bq/kg</td>
+		<td>Becquerels per Kilogram</td>
+	</tr>
+	<tr>
+		<td colspan="2">Radioactivity</td>
+		<td colspan="2">Bq/l</td>
+		<td>Becquerels per Litre</td>
+	</tr>
+	<tr>
+		<td colspan="2">Electrical Flow</td>
+		<td colspan="2">kWh</td>
+		<td>Kilowatt Hour</td>
+	</tr>
+	<tr>
+		<td colspan="2">Electrical Flow</td>
+		<td colspan="2">>MWh</td>
+		<td>Megawatt Hour</td>
+	</tr>
+	<tr>
+		<td colspan="2">Electrical Flow</td>
+		<td colspan="2">GWh</td>
+		<td>Gigawatt Hour</td>
+	</tr>
+</table>
+<h4>Related Documents</h4>
+<table>
+	<tr>
+		<th>Documents</th>
+		<td>BS EN ISO 80000-1, 80000-2 and 80000-3: 2013
+			<a href="http://ukma.org.uk/docs/ukma-style-guide.pdf">http://ukma.org.uk/docs/ukma-style-guide.pdf</a>
+		</td>
+	</tr>
+</table>
+</main>
+
+{{/content}}
+
+{{/layout}}

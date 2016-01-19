@@ -2506,45 +2506,84 @@ input.validation-code {
   padding-top: 15px;
 }
 
-.help .column-three-quarters {
+.data-exchange-protocol .column-three-quarters {
   float: left;
   width: 75%;
   box-sizing: border-box;
   padding: 0 15px;
 }
 
-.help .inner-block {
+.data-exchange-protocol .inner-block {
   padding: 0 30px;
 }
 
-.help .heading {
+.data-exchange-protocol .heading {
   padding: 45px 0;
 }
 
-.help .heading .type {
+.data-exchange-protocol .heading .type {
   color: #6f777b;
   margin-bottom: 0.2em;
 }
 
-.help .metadata-list {
+.data-exchange-protocol .editions h2 {
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.11111;
+  padding-top: 30px;
+  text-transform: none;
+}
+
+.data-exchange-protocol .editions .document-list .document-row {
+  border-bottom: 1px solid #bfc1c3;
+  display: block;
+  list-style: outside none none;
+  overflow: hidden;
+  padding: 5px 0 10px;
+}
+
+.data-exchange-protocol .editions .document-list .document-row h3 {
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.31579;
+  margin-top: 5px;
+  text-transform: none;
+}
+
+.data-exchange-protocol .editions .document-list .document-row ul li {
+  display: block;
+  float: left;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+  list-style: outside none none;
+  padding: 0 15px 0 0;
+  text-transform: none;
+}
+
+.data-exchange-protocol .editions .document-list .document-row a {
+  text-decoration: none;
+}
+
+.data-exchange-protocol .metadata-list {
   display: block;
   clear: both;
   margin-bottom: 30px;
   overflow: hidden;
 }
 
-.help .metadata-list a {
+.data-exchange-protocol .metadata-list a {
   text-decoration: none;
 }
 
-.help .metadata-list dl {
+.data-exchange-protocol .metadata-list dl {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.42857;
   text-transform: none;
 }
 
-.help .metadata-list dl dt {
+.data-exchange-protocol .metadata-list dl dt {
   min-width: 120px;
   padding-right: 10px;
   width: auto;
@@ -2552,16 +2591,16 @@ input.validation-code {
   float: left;
 }
 
-.help .metadata-list dl dd {
+.data-exchange-protocol .metadata-list dl dd {
   width: 70%;
   float: left;
 }
 
-.help .contextual-info {
+.data-exchange-protocol .contextual-info {
   padding-top: 5px;
 }
 
-.help .contextual-info h1 {
+.data-exchange-protocol .contextual-info h1 {
   font-family: "nta",Arial,sans-serif;
   font-size: 19px;
   font-weight: 400;
@@ -2571,7 +2610,7 @@ input.validation-code {
   text-transform: none;
 }
 
-.help .contextual-info ol {
+.data-exchange-protocol .contextual-info ol {
   border-top: 1px solid #bfc1c3;
   font-family: "nta",Arial,sans-serif;
   font-size: 16px;
@@ -2582,24 +2621,32 @@ input.validation-code {
   text-transform: none;
 }
 
-.help .contextual-info li {
+.data-exchange-protocol .contextual-info li {
   list-style: outside none none;
   margin-left: 0;
   padding-top: 0;
 }
 
-.help .contextual-info li a {
+.data-exchange-protocol .contextual-info li a {
   border-bottom: 1px solid #bfc1c3;
   display: block;
   padding: 5px 0;
 }
 
-.help .summary {
+.data-exchange-protocol .summary {
   padding-bottom: 45px;
   padding-top: 15px;
 }
 
-.help .data-exchange-protocol h2 {
+.data-exchange-protocol .back {
+  background: #2b8cc4 none repeat scroll 0 0;
+  display: block;
+  margin-left: 0;
+  margin-top: 30px;
+  padding: 5px;
+}
+
+.data-exchange-protocol h2 {
   font-family: "nta", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.2;
@@ -2608,13 +2655,13 @@ input.validation-code {
 }
 
 @media (min-width: 641px) {
-  .help .data-exchange-protocol h2 {
+  .data-exchange-protocol h2 {
     font-size: 24px;
     line-height: 1.25;
   }
 }
 
-.help .data-exchange-protocol h3 {
+.data-exchange-protocol h3 {
   font-family: "nta", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.2;
@@ -2623,13 +2670,13 @@ input.validation-code {
 }
 
 @media (min-width: 641px) {
-  .help .data-exchange-protocol h3 {
+  .data-exchange-protocol h3 {
     font-size: 24px;
     line-height: 1.25;
   }
 }
 
-.help .data-exchange-protocol h4, .help .data-exchange-protocol caption {
+.data-exchange-protocol h4, .data-exchange-protocol caption {
   font-family: "nta", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.25;
@@ -2638,22 +2685,22 @@ input.validation-code {
 }
 
 @media (min-width: 641px) {
-  .help .data-exchange-protocol h4, .help .data-exchange-protocol caption {
+  .data-exchange-protocol h4, .data-exchange-protocol caption {
     font-size: 19px;
     line-height: 1.3157894737;
   }
 }
 
-.help .data-exchange-protocol strong {
+.data-exchange-protocol strong {
   font-weight: bold;
 }
 
-.help .data-exchange-protocol table {
+.data-exchange-protocol table {
   margin-bottom: 45px;
   margin-top: 15px;
 }
 
-.help .data-exchange-protocol table caption {
+.data-exchange-protocol table caption {
   font-family: "nta", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.1428571429;
@@ -2663,25 +2710,25 @@ input.validation-code {
 }
 
 @media (min-width: 641px) {
-  .help .data-exchange-protocol table caption {
+  .data-exchange-protocol table caption {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-.help .data-exchange-protocol table th, .help .data-exchange-protocol table td {
+.data-exchange-protocol table th, .data-exchange-protocol table td {
   vertical-align: top;
 }
 
-.help .data-exchange-protocol table td p:first-child {
+.data-exchange-protocol table td p:first-child {
   margin-top: 0;
 }
 
-.help .data-exchange-protocol .date-and-time th {
+.data-exchange-protocol .date-and-time th {
   width: 25%;
 }
 
-.help .data-exchange-protocol .date-and-time td th {
+.data-exchange-protocol .date-and-time td th {
   width: inherit;
 }
 
