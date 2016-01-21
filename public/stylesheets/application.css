@@ -2598,21 +2598,15 @@ input.validation-code {
 
 .data-exchange-protocol .contextual-info {
   padding-top: 5px;
+  font-size: 16px;
 }
 
 .data-exchange-protocol .contextual-info h1 {
-  font-family: "nta",Arial,sans-serif;
-  font-size: 19px;
-  font-weight: 400;
-  line-height: 1.31579;
-  padding-bottom: 3px;
-  padding-top: 7px;
-  text-transform: none;
+  margin: 0;
+  padding: 0;
 }
 
 .data-exchange-protocol .contextual-info ol {
-  border-top: 1px solid #bfc1c3;
-  font-family: "nta",Arial,sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.25;
@@ -2621,16 +2615,37 @@ input.validation-code {
   text-transform: none;
 }
 
-.data-exchange-protocol .contextual-info li {
-  list-style: outside none none;
-  margin-left: 0;
-  padding-top: 0;
+.data-exchange-protocol .contextual-info li a {
+  text-decoration: none;
 }
 
-.data-exchange-protocol .contextual-info li a {
-  border-bottom: 1px solid #bfc1c3;
-  display: block;
-  padding: 5px 0;
+.data-exchange-protocol .contextual-info .dash-list {
+  margin-bottom: 20px;
+}
+
+.data-exchange-protocol .contextual-info .dash-list li {
+  list-style-position: inside;
+  padding: 0 15px 0 0;
+}
+
+@media (min-width: 1px) {
+  .data-exchange-protocol .contextual-info .dash-list li {
+    list-style: outside none none;
+    margin-left: 15px;
+  }
+  .data-exchange-protocol .contextual-info .dash-list li::before {
+    content: "-";
+    float: left;
+    margin-left: -15px;
+    position: relative;
+    width: 15px;
+  }
+}
+
+@media (min-width: 769px) {
+  .data-exchange-protocol .contextual-info .dash-list li {
+    padding-top: 5px;
+  }
 }
 
 .data-exchange-protocol .summary {
