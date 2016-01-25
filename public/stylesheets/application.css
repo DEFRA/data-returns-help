@@ -1984,6 +1984,10 @@ ol {
   margin-right: 0;
 }
 
+.button-secondary.back {
+  padding: 0.526316em 0.789474em 0.263158em;
+}
+
 .file-upload .well {
   margin-bottom: 30px;
 }
@@ -2101,6 +2105,10 @@ ol {
 
 input.validation-code {
   width: 100px;
+}
+
+p.back {
+  margin-top: 15px;
 }
 
 /* template */
@@ -2229,11 +2237,14 @@ input.validation-code {
 }
 
 /* Parameter list */
+p strong {
+  font-weight: 600;
+}
+
 /* Error table */
 .error-table {
   /* Parameters */
   /* Return type */
-  /* Units */
 }
 
 .error-table table {
@@ -2285,59 +2296,65 @@ input.validation-code {
   background: #f8f8f8;
 }
 
-.error-table .error-table-units .filter {
+.error-table .error-table-more-details .panel-indent {
+  padding: 5px 0;
+  border: 0;
+}
+
+/* Units */
+.error-table-units .filter {
   float: right;
 }
 
-.error-table .error-table-units .panel-indent .show-all {
+.error-table-units .panel-indent .show-all {
   margin-bottom: 36px;
 }
 
-.error-table .error-table-units h2.heading-small {
+.error-table-units h2.heading-small {
   padding: 0.375em 0.625em 0.3125em 0;
   margin-top: 0;
 }
 
-.error-table .error-table-units .table-container {
+.error-table-units .table-container {
   /*	height:200px; */
   /*	overflow:auto; */
 }
 
-.error-table .error-table-units table th {
+.error-table-units table th {
   font-weight: 600;
 }
 
-.error-table .error-table-units table .unit {
+.error-table-units table .unit {
   width: 25%;
 }
 
-.error-table .error-table-units table .description {
+.error-table-units table .description {
   width: 75%;
 }
 
-.error-table .error-table-units table th, .error-table .error-table-units table td {
+.error-table-units table th, .error-table-units table td {
   padding: 0.375em 0.625em 0.3125em 0;
 }
 
-.error-table .error-table-units table tr {
+.error-table-units table tr {
   display: table-row;
 }
 
-.error-table .error-table-units table td {
+.error-table-units table td {
   display: table-cell;
 }
 
-.error-table .error-table-units .measure-type li {
+.error-table-units .measure-type li {
   padding: 0.375em 0 0.3125em 0;
 }
 
-.error-table .error-table-units .measure-type li button {
+.error-table-units .measure-type li button {
   font-size: 14px !important;
   text-align: left;
   margin-bottom: 0 !important;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary {
+.error-table-units .measure-type li .button-secondary {
   background-color: #dee0e2;
   position: relative;
   display: -moz-inline-stack;
@@ -2359,44 +2376,44 @@ input.validation-code {
   color: #0b0c0c;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary:visited {
+.error-table-units .measure-type li .button-secondary:visited {
   background-color: #dee0e2;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary:hover, .error-table .error-table-units .measure-type li .button-secondary:focus {
+.error-table-units .measure-type li .button-secondary:hover, .error-table-units .measure-type li .button-secondary:focus {
   background-color: #d0d3d6;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary:active {
+.error-table-units .measure-type li .button-secondary:active {
   top: 2px;
   -webkit-box-shadow: 0 0 0 #dee0e2;
   -moz-box-shadow: 0 0 0 #dee0e2;
   box-shadow: 0 0 0 #dee0e2;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary.disabled, .error-table .error-table-units .measure-type li .button-secondary[disabled="disabled"], .error-table .error-table-units .measure-type li .button-secondary[disabled] {
+.error-table-units .measure-type li .button-secondary.disabled, .error-table-units .measure-type li .button-secondary[disabled="disabled"], .error-table-units .measure-type li .button-secondary[disabled] {
   zoom: 1;
   filter: alpha(opacity=50);
   opacity: 0.5;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary.disabled:hover, .error-table .error-table-units .measure-type li .button-secondary[disabled="disabled"]:hover, .error-table .error-table-units .measure-type li .button-secondary[disabled]:hover {
+.error-table-units .measure-type li .button-secondary.disabled:hover, .error-table-units .measure-type li .button-secondary[disabled="disabled"]:hover, .error-table-units .measure-type li .button-secondary[disabled]:hover {
   cursor: default;
   background-color: #dee0e2;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary.disabled:active, .error-table .error-table-units .measure-type li .button-secondary[disabled="disabled"]:active, .error-table .error-table-units .measure-type li .button-secondary[disabled]:active {
+.error-table-units .measure-type li .button-secondary.disabled:active, .error-table-units .measure-type li .button-secondary[disabled="disabled"]:active, .error-table-units .measure-type li .button-secondary[disabled]:active {
   top: 0;
   -webkit-box-shadow: 0 2px 0 #b5babe;
   -moz-box-shadow: 0 2px 0 #b5babe;
   box-shadow: 0 2px 0 #b5babe;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary:link, .error-table .error-table-units .measure-type li .button-secondary:hover, .error-table .error-table-units .measure-type li .button-secondary:focus, .error-table .error-table-units .measure-type li .button-secondary:visited {
+.error-table-units .measure-type li .button-secondary:link, .error-table-units .measure-type li .button-secondary:hover, .error-table-units .measure-type li .button-secondary:focus, .error-table-units .measure-type li .button-secondary:visited {
   color: #0b0c0c;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary:before {
+.error-table-units .measure-type li .button-secondary:before {
   content: "";
   height: 110%;
   width: 100%;
@@ -2407,19 +2424,19 @@ input.validation-code {
   left: 0;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary:active:before {
+.error-table-units .measure-type li .button-secondary:active:before {
   top: -10%;
   height: 120%;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary[rel="external"]:after {
+.error-table-units .measure-type li .button-secondary[rel="external"]:after {
   display: none;
   content: none;
   margin-left: 0;
   margin-right: 0;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary.active {
+.error-table-units .measure-type li .button-secondary.active {
   outline: 3px solid #ffbf47;
   background-color: #fff;
   position: relative;
@@ -2442,44 +2459,44 @@ input.validation-code {
   color: #0b0c0c;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary.active:visited {
+.error-table-units .measure-type li .button-secondary.active:visited {
   background-color: #fff;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary.active:hover, .error-table .error-table-units .measure-type li .button-secondary.active:focus {
+.error-table-units .measure-type li .button-secondary.active:hover, .error-table-units .measure-type li .button-secondary.active:focus {
   background-color: #f2f2f2;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary.active:active {
+.error-table-units .measure-type li .button-secondary.active:active {
   top: 2px;
   -webkit-box-shadow: 0 0 0 #fff;
   -moz-box-shadow: 0 0 0 #fff;
   box-shadow: 0 0 0 #fff;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary.active.disabled, .error-table .error-table-units .measure-type li .button-secondary.active[disabled="disabled"], .error-table .error-table-units .measure-type li .button-secondary.active[disabled] {
+.error-table-units .measure-type li .button-secondary.active.disabled, .error-table-units .measure-type li .button-secondary.active[disabled="disabled"], .error-table-units .measure-type li .button-secondary.active[disabled] {
   zoom: 1;
   filter: alpha(opacity=50);
   opacity: 0.5;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary.active.disabled:hover, .error-table .error-table-units .measure-type li .button-secondary.active[disabled="disabled"]:hover, .error-table .error-table-units .measure-type li .button-secondary.active[disabled]:hover {
+.error-table-units .measure-type li .button-secondary.active.disabled:hover, .error-table-units .measure-type li .button-secondary.active[disabled="disabled"]:hover, .error-table-units .measure-type li .button-secondary.active[disabled]:hover {
   cursor: default;
   background-color: #fff;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary.active.disabled:active, .error-table .error-table-units .measure-type li .button-secondary.active[disabled="disabled"]:active, .error-table .error-table-units .measure-type li .button-secondary.active[disabled]:active {
+.error-table-units .measure-type li .button-secondary.active.disabled:active, .error-table-units .measure-type li .button-secondary.active[disabled="disabled"]:active, .error-table-units .measure-type li .button-secondary.active[disabled]:active {
   top: 0;
   -webkit-box-shadow: 0 2px 0 #d9d9d9;
   -moz-box-shadow: 0 2px 0 #d9d9d9;
   box-shadow: 0 2px 0 #d9d9d9;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary.active:link, .error-table .error-table-units .measure-type li .button-secondary.active:hover, .error-table .error-table-units .measure-type li .button-secondary.active:focus, .error-table .error-table-units .measure-type li .button-secondary.active:visited {
+.error-table-units .measure-type li .button-secondary.active:link, .error-table-units .measure-type li .button-secondary.active:hover, .error-table-units .measure-type li .button-secondary.active:focus, .error-table-units .measure-type li .button-secondary.active:visited {
   color: #0b0c0c;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary.active:before {
+.error-table-units .measure-type li .button-secondary.active:before {
   content: "";
   height: 110%;
   width: 100%;
@@ -2490,19 +2507,19 @@ input.validation-code {
   left: 0;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary.active:active:before {
+.error-table-units .measure-type li .button-secondary.active:active:before {
   top: -10%;
   height: 120%;
 }
 
-.error-table .error-table-units .measure-type li .button-secondary.active[rel="external"]:after {
+.error-table-units .measure-type li .button-secondary.active[rel="external"]:after {
   display: none;
   content: none;
   margin-left: 0;
   margin-right: 0;
 }
 
-.error-table .error-table-units .measure-type li:first-child {
+.error-table-units .measure-type li:first-child {
   padding-top: 15px;
 }
 

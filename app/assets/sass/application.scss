@@ -53,7 +53,13 @@
 
 .button-secondary {
 	@include button($grey-3);
+	&.back	{
+		padding:0.526316em 0.789474em 0.263158em;
+	}
 }
+
+
+
 
 .file-upload {
 	.well {
@@ -174,6 +180,10 @@
 
 input.validation-code {
 	width:100px;
+}
+
+p.back {
+	margin-top:15px;
 }
 
 /* template */
@@ -309,6 +319,10 @@ input.validation-code {
 	}
 }
 
+p strong {
+	font-weight:600;
+}
+
 /* Error table */
 .error-table {
 	table {
@@ -359,64 +373,75 @@ input.validation-code {
 			}
 		}
 	}
-	/* Units */
-	.error-table-units {
-		.filter {
-			float:right;
-		}
-		.panel-indent .show-all {
-			margin-bottom: 36px;
-		}
-		h2.heading-small {
-			padding: em(6, 16) em(10, 16) em(5, 16) 0;
-			margin-top:0;
-		}
-		.table-container {
-		/*	height:200px; */
-		/*	overflow:auto; */
-		}
-		table {
-			th {
-				font-weight:600;
-				}
-			.unit {
-				width:25%
-			}
-			.description {
-				width:75%
-			}
-    	th, td {
-    		padding: em(6, 16) em(10, 16) em(5, 16) 0;
-    		}
-    	tr {
-    		display: table-row; 
-    		}
-  		td {
-  			display: table-cell; 
-  			}
-    	}
-		.measure-type {
-			li {
-				padding: em(6, 16) 0 em(5, 16) 0;
-				button {
-					font-size:14px !important;
-					text-align:left;
-					margin-bottom:0 !important;
-				}
-				.button-secondary {
-					@include button($grey-3);
-					&.active {
-					  outline: 3px solid $focus-colour;
-					  @include button($white);
-					}
-				}
-			}
-			li:first-child {
-				padding-top:15px;
-			}
+	.error-table-more-details {
+		.panel-indent {
+			padding:5px 0;
+			border:0;
 		}
 	}
 }
+
+
+/* Units */
+.error-table-units {
+	.filter {
+		float:right;
+	}
+	.panel-indent .show-all {
+		margin-bottom: 36px;
+	}
+	h2.heading-small {
+		padding: em(6, 16) em(10, 16) em(5, 16) 0;
+		margin-top:0;
+	}
+	.table-container {
+	/*	height:200px; */
+	/*	overflow:auto; */
+	}
+	table {
+		th {
+			font-weight:600;
+			}
+		.unit {
+			width:25%
+		}
+		.description {
+			width:75%
+		}
+  	th, td {
+  		padding: em(6, 16) em(10, 16) em(5, 16) 0;
+  		}
+  	tr {
+  		display: table-row; 
+  		}
+		td {
+			display: table-cell; 
+			}
+  	}
+	.measure-type {
+		li {
+			padding: em(6, 16) 0 em(5, 16) 0;
+			button {
+				font-size:14px !important;
+				text-align:left;
+				margin-bottom:0 !important;
+			}
+			.button-secondary {
+				@include button($grey-3);
+				&.active {
+				  outline: 3px solid $focus-colour;
+				  @include button($white);
+				}
+			}
+		}
+		li:first-child {
+			padding-top:15px;
+		}
+	}
+}
+
+
+
 
 // Data exchange protocol
 
