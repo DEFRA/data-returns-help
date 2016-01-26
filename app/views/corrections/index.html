@@ -117,22 +117,6 @@
 					  			<span id="return-type-12">EPR/IED self monitoring periodic Sewer, ETP or Tankering emissions return</span>
 					  			<button id="copy-button-12" class="button button-secondary" data-clipboard-target="#return-type-12">Copy to clipboard</button>
 					  		</li>
-					  		<li class="return-type-13">
-					  			<span id="return-type-13">EPR/IED self monitoring periodic leachate production/treatment</span>
-					  			<button id="copy-button-13" class="button button-secondary" data-clipboard-target="#return-type-13">Copy to clipboard</button>
-					  		</li>
-					  		<li class="return-type-14">
-					  			<span id="return-type-14">EPR/IED self monitoring periodic landfill gas production/treatment</span>
-					  			<button id="copy-button-14" class="button button-secondary" data-clipboard-target="#return-type-14">Copy to clipboard</button>
-					  		</li>
-					  		<li class="return-type-15">
-					  			<span id="return-type-15">EPR/IED schedule 5/6 incident report</span>
-					  			<button id="copy-button-15" class="button button-secondary" data-clipboard-target="#return-type-15">Copy to clipboard</button>
-					  		</li>
-					  		<li class="return-type-16">
-					  			<span id="return-type-16">EPR/IED Landfill Annual Report</span>
-					  			<button id="copy-button-16" class="button button-secondary" data-clipboard-target="#return-type-16">Copy to clipboard</button>
-					  		</li>
 					  	</ul>
 					  	<p><a href="#">Find out how to format return type to meet EA standards</a>.</p>
 					  </div>
@@ -467,9 +451,6 @@
         new Clipboard('#copy-button-11');
         new Clipboard('#copy-button-12');
         new Clipboard('#copy-button-13');
-        new Clipboard('#copy-button-14');
-        new Clipboard('#copy-button-15');
-        new Clipboard('#copy-button-16');
 	  })();
   </script>	 
   
@@ -693,56 +674,6 @@
       $('#copy-button-13').removeClass("visible");
       $('li.return-type-13').addClass("static");
       $('li.return-type-13').removeClass("hover");
-      return false;
-    });
-    
-    $('#copy-button-14').addClass("hidden");
-    $('li.return-type-14').addClass("static");
-    $('.return-type-14').mouseover(function() {
-      $('#copy-button-14').addClass("visible");
-      $('#copy-button-14').removeClass("hidden");
-      $('li.return-type-14').addClass("hover");
-      $('li.return-type-14').removeClass("static");
-      return false;
-    });
-    $('.return-type-14').mouseout(function() {
-      $('#copy-button-14').addClass("hidden");
-      $('#copy-button-14').removeClass("visible");
-      $('li.return-type-14').addClass("static");
-      $('li.return-type-14').removeClass("hover");
-      return false;
-    }); 
-    
-    $('#copy-button-15').addClass("hidden");
-    $('li.return-type-15').addClass("static");
-    $('.return-type-15').mouseover(function() {
-      $('#copy-button-15').addClass("visible");
-      $('#copy-button-15').removeClass("hidden");
-      $('li.return-type-15').addClass("hover");
-      $('li.return-type-15').removeClass("static");
-      return false;
-    });
-    $('.return-type-15').mouseout(function() {
-      $('#copy-button-15').addClass("hidden");
-      $('#copy-button-15').removeClass("visible");
-      $('li.return-type-15').addClass("static");
-      $('li.return-type-15').removeClass("hover");
-      return false;
-    });
-    $('#copy-button-16').addClass("hidden");
-    $('li.return-type-16').addClass("static");
-    $('.return-type-16').mouseover(function() {
-      $('#copy-button-16').addClass("visible");
-      $('#copy-button-16').removeClass("hidden");
-      $('li.return-type-16').addClass("hover");
-      $('li.return-type-16').removeClass("static");
-      return false;
-    });
-    $('.return-type-16').mouseout(function() {
-      $('#copy-button-16').addClass("hidden");
-      $('#copy-button-16').removeClass("visible");
-      $('li.return-type-16').addClass("static");
-      $('li.return-type-16').removeClass("hover");
       return false;
     });
 	});
