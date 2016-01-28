@@ -47,7 +47,7 @@
 				</dd>
         <dt>Part of:</dt>
         <dd class="js-hide-extra-metadata">
-					<a href="/" class="collection-link">Data Exchange Protocol</a>
+					<a href="/" class="collection-link">How to format Environment Agency data</a>
 				</dd>
 			</dl>
 		</aside>
@@ -76,13 +76,13 @@
 					<td>Rtn_Type</td>
 					<td>Return Type. This field must be completed. The Return Type must be taken from the <a href="#">return type controlled list</a>. More than one return type can be reported in a single csv file.<br>
 					
-					In a csv file this file should be delimited with a double quote in addition to the usual comma delimiter. This is because many the return type can contain a comma, which will confuse the software. An example is given below. The delimiters are shown in red.
+					In a csv file this field should be delimited with a double quote in addition to the usual comma delimiter. This is because the return type can contain a comma, which will confuse the software. An example is given below.
 					,”EPR/IED Sewer, ETP or Tankering emissions return”,</td>
 					<td>Yes</td>
 				</tr>
 				<tr>
 					<td>Mon_Point</td>
-					<td>Monitoring Point Ref. This is a reference to the sample or emission point at which the sample was taken. The name of the monitoring point should be taken those given in the Permit. It should only contain letters and numbers. Any symbols should be removed. 
+					<td>Monitoring Point Ref. This is a reference to the sample or emission point at which the sample was taken. The name of the monitoring point should be taken from the permit. It should only contain letters and numbers. Any symbols should be removed. 
 					(example Boreholes 1)</td>
 					<td>Yes</td>
 				</tr>
@@ -96,20 +96,20 @@
 				</tr>
 				<tr>
 					<td>Parameter</td>
-					<td>The name of the chemical substance or parameter that is being measured. The name must be taken from the controlled list.</td>
+					<td>The name of the chemical substance or parameter that is being measured. The name must be taken from the <a href="/help/detailed-guide/parameters">parameter controlled list</a>.</td>
 					<td>Yes</td>
 				</tr>
 				<tr>
 					<td>CAS</td>
 					<td>The CAS number is an international standard code for chemical substances. When parameter is selected from the list, the corresponding CAS number should be entered in this field.
 					This field can be left blank if there is no CAS number for the parameter.</td>
-					<td>Yes</td>
+					<td>Must be provided where available</td>
 				</tr>
 				<tr>
 					<td>Value</td>
 					<td>The numerical value of the measurement. This should be a number. It can include blanks or zeros. It can also include the symbols &lt; or &gt;.
-					Not other text characters are allowed. Any other text, for example "BRT", or "waterlogged", should be put in the Comment heading.
-					In a csv file this file should be delimited with a double quote in addition to the usual comma delimiter. This is because many parameters also contain a comma, which will confuse the software. An example is given below. The delimiters are shown in red.
+					No other text characters are allowed. Any other text, for example "BRT", or "waterlogged", should be put in the Comment heading.
+					In a csv file this field should be delimited with a double quote in addition to the usual comma delimiter. This is because many parameters also contain a comma, which will confuse the software. An example is given below.
 					,"1,4-Dioxane",</td>
 					<td>Yes</td>
 				</tr>
@@ -127,8 +127,7 @@
 				<tr>
 					<td>Ref_Period</td>
 					<td>The reference period for the sample, as specified in the Permit.  (example: Hourly mean). 
-					The options are given in the <a href="/help/detailed-guides/reference-periods">reference period controlled list</a>
-					This can be left blank if it does not apply.</td>
+					The options are given in the <a href="/help/detailed-guides/reference-periods">reference period controlled list</a></td>
 					<td>Must be provided where available</td>
 				</tr>
 				<tr>
@@ -141,7 +140,7 @@
 				</tr>
 				<tr>
 					<td>Method</td>
-					<td>A list of Test Methodologies and Standards is given in the <a href="/help/detailed-guides/monitoring-standard">monitoring method and standards rules</a>. This information should be included where applicable. This field can be left blank if no specified standard has been used.</td>
+					<td>A list of Test Methodologies and Standards is given in the <a href="/help/detailed-guides/monitoring-standard">monitoring method and standards rules</a>. This information should be included where applicable.</td>
 					<td>Must be provided where available</td>
 				</tr>
 				<tr>
@@ -155,13 +154,8 @@
 					<td>Optional</td>
 				</tr>
 				<tr>
-					<td>Text Value</td>
-					<td>This field should be left blank.</td>
-					<td>Optional</td>
-				</tr>
-				<tr>
 					<td>Site Name</td>
-					<td>This field is optional. The permit number should allow us to identify the site, but this field allows us to cross check that information. The site name should only contain letters and numbers.</td>
+					<td>The permit number should allow us to identify the site, but this field allows us to cross check that information. The site name should only contain letters and numbers.</td>
 					<td>Optional</td>
 				</tr>
 				<tr>
