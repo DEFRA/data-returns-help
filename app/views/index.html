@@ -16,7 +16,7 @@
 		<p>
 			<strong class="phase-tag">BETA</strong>
 			<span>This is a new service &ndash; your
-				<a href="#" onclick="noLink()">feedback</a> will help us to improve it.</span>
+				<a href="#1" data-toggle="modal" data-target="#unavailable">feedback</a> will help us to improve it.</span>
 		</p>
 	</div>
 	<div class="heading">
@@ -58,21 +58,43 @@
 				</nav>
 		</div>
 		<div class="column-two-thirds">
-			<p>You can submit landfill emissions compliance data using the <a href="#" onclick="noLink()">online service</a>. First you must correctly format data to meet Environment Agency standards. Once you’ve formatted your data you must <a href="#" onclick="noLink()">save it as a CSV file</a>.</p>
+			<p>You can submit landfill emissions compliance data using the <a href="#2" data-toggle="modal" data-target="#unavailable">online service</a>. First you must correctly format data to meet Environment Agency standards. Once you’ve formatted your data you must <a href="#3" data-toggle="modal" data-target="#unavailable">save it as a CSV file</a>.</p>
 
 
 			<p>Set up your data management systems using these rules to produce an automated export of data in the correct format.</p>
 			
 			<p>Follow these steps to correctly format your data:</p>
 			<ul class="list list-number">
-				<li>apply rules to correctly format data under <a href="#" onclick="noLink()">Environmental Permitting Regulations (EPR)</a></li>
+				<li>apply rules to correctly format data under <a href="#4" data-toggle="modal" data-target="#unavailable">Environmental Permitting Regulations (EPR)</a></li>
 				<li>check if there are any further rules that apply to specific return types</li>
-				<li>check if you need to apply <a href="#" onclick="noLink()">general rules</a> on allowable formats, eg for symbols</li>
-				<li><a href="#" onclick="noLink()">save your data file as CSV</a></li>
+				<li>check if you need to apply <a href="#5" data-toggle="modal" data-target="#unavailable">general rules</a> on allowable formats, eg for symbols</li>
+				<li><a href="#6" data-toggle="modal" data-target="#unavailable">save your data file as CSV</a></li>
 			</ul>
-			<p><a href="#" onclick="noLink()">Download an example of an EPR data returns file saved as CSV.</a></p>
+			<p><a href="#7" data-toggle="modal" data-target="#unavailable"></a></p>
 
-
+			<section class="attachment clearfix embedded" id="attachment">
+				<div class="attachment-thumb">
+					<a aria-hidden="true" class="thumbnail" href=""><img alt="" src="/public/images/pub-cover-spreadsheet.png"></a>
+				</div>
+				<div class="attachment-details">
+					<p class=""><a aria-describedby="attachment" href="">Download an example of an EPR data returns file saved as CSV</a></p>
+					<p class="metadata">
+							<span class="type"><abbr title="Comma Separated File">CSV</abbr></span>, <span class="file-size">4KB</span>
+					</p>
+				</div>
+			</section>
+			
+			<section class="attachment clearfix embedded" id="attachment">
+				<div class="attachment-thumb">
+					<a aria-hidden="true" class="thumbnail" href=""><img alt="" src="/public/images/example-pdf.png"></a>
+				</div>
+				<div class="attachment-details">
+					<p class=""><a aria-describedby="attachment" href="">Download a printable PDF version of this guidance.</a></p>
+					<p class="metadata">
+							<span class="type"><abbr title="Comma Separated File">PDF</abbr></span>, <span class="file-size">31KB</span>
+					</p>
+				</div>
+			</section>
 			
 			<section class="group" id="document_collection">
 				<div class="editions">
@@ -135,7 +157,7 @@
 			
 			<section class="group" id="document_collection">
 				<div class="editions">
-					<h2 id="agreed-lists">Agreed lists: units and measures, parameters, reference periods, monitoring period and methods</h2>
+					<h2 id="agreed-lists">Controlled lists: units and measures, parameters, reference periods, monitoring period and methods</h2>
 					<div class="group-body">
 						<div class="govspeak">
 							<p>The Environment Agency is producing documented data standards across a number of common data reporting regimes.</p>
@@ -200,11 +222,25 @@
 					</ol>
 				</div>
 			</section>
-			
 		</div>
 	</div>
-
 </main>
+
+
+<!-- Modal -->
+<div class="modal fade" id="unavailable" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        Sorry, this page isn't currently available as we're still developing this service.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="button" data-dismiss="modal">Go back</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 {{/content}}
 
 {{/layout}}
