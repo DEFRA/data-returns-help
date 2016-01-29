@@ -2566,6 +2566,14 @@ p strong {
   margin-bottom: 0.2em;
 }
 
+.data-exchange-protocol .list li {
+  margin-bottom: 10px;
+}
+
+.data-exchange-protocol .list li:last-child {
+  margin-bottom: 0;
+}
+
 .data-exchange-protocol .editions h2 {
   font-size: 27px;
   font-weight: 400;
