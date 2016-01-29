@@ -74,7 +74,7 @@
 				</tr>
 				<tr>
 					<td>Rtn_Type</td>
-					<td>Return Type. This field must be completed. The Return Type must be taken from the <a href="/help/detailed-guides/return-type-rules">return type controlled list</a>. More than one return type can be reported in a single csv file.<br>
+					<td>Return Type. This field must be completed. The Return Type must be taken from the <a  href="#1" data-toggle="modal" data-target="#unavailable">return type controlled list</a>. More than one return type can be reported in a single csv file.<br>
 					
 					In a csv file this field should be delimited with a double quote in addition to the usual comma delimiter. This is because the return type can contain a comma, which will confuse the software. An example is given below.
 					,”EPR/IED Sewer, ETP or Tankering emissions return”,</td>
@@ -168,6 +168,21 @@
 <!-- grid-row	</div> -->
 </div><!-- date and time -->
 </main>
+
+
+<!-- Modal -->
+<div class="modal fade" id="unavailable" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        Sorry, this page isn't currently available as we're still developing this service.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="button" data-dismiss="modal">Go back</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 {{/content}}
 
