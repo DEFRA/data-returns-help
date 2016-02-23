@@ -1,0 +1,10 @@
+.button-secondary {
+	@include button($grey-3);
+	&.back	{
+		padding:0.526316em 0.789474em 0.263158em;
+	}
+}
+
+.button-get-started {
+  background-image: url("/public/images/icons/icon-pointer.png");
+}

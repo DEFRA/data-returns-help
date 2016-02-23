@@ -16,7 +16,6 @@
 
 <main id="content" role="main" class="data-exchange-protocol">
 
-
 <div class="phase-banner beta-banner">
 	<p>
 		<strong class="phase-tag">BETA</strong>
@@ -26,7 +25,7 @@
 </div>
 <div class="heading">
 	<p class="type font-medium">Send your data returns online</p>
-	<h1 class="bold-large">Specific rules for EPR return types</h1>
+	<h1 class="bold-large">EA controlled list of return types</h1>
 </div>
 <div class="grid-row">
 	<div class="column-two-thirds">
@@ -54,74 +53,46 @@
 	</div>
 </div>
 
-<div class="return-type-rules">
-	<p class="lede">You must apply these specific rules to meet EA standards and submit data returns. </p>
-
-			<table>
+<div class="return-type">
+	<p class="lede">You must use these return type names to meet EA standards and submit data returns.</p>
+	<p><a href="/help/detailed-guides/return-type-rules">See specific rules</a> on how to format data for each return type.</p>
+	<div class="grid-row">
+		<div class="column-three-quarters">
+			<table class="single-column">
 				<tr>
-					<th style="width: 40%;">Return type names</th>
-					<th style="width: 60%;">Field heading and rule</th>
+					<th>Rtn_Type</th>
 				</tr>
 				<tr>
 					<td>EPR/IED Air (point source) emissions return</td>
-					<td><strong>Unit</strong>: always use mg/m&sup3; with hourly for <strong>reference period</strong>. Measured as per M2 (or such other subsequent guidance as may be agreed in writing with the Environment Agency).</td>
 				</tr>
 				<tr>
 					<td>EPR/IED Air (ambient) monitoring return</td>
-					<td><strong>Unit</strong>: always use fibre/ml with 2 hour <strong>reference periods</strong> or g/hr for particulates.</td>
 				</tr>
 				<tr>
 					<td>EPR/IED Leachate level return</td>
-					<td><strong>Unit</strong>: always use monthly for operational cells, or quarterly for non-operational. State whether m&gt;AOD or m&gt;cell base as qualifier in <strong>text value</strong> field.</td>
 				</tr>
 				<tr>
 					<td>EPR/IED Leachate quality return</td>
-					<td>
-						<ul class="list">
-							<li><strong>Reference period</strong>: use MEPP, quarterly or annually.</li>
-							<li><strong>Unit</strong>: must be a concentration, physical parameter (pH, electrical conductivity, COD) or depth in m.</li>
-						</ul>
-					</td>
 				</tr>
 				<tr>
 					<td>EPR/IED Surface water emissions return</td>
-					<td>
-						<ul class="list">
-							<li><strong>Unit</strong>: use either flow (l/s or m&sup3;/day) or concentration mg/l (exceptions: pH and temperature).</li>
-							<li><strong>Reference period</strong>: use either instantaneous or spot sample.</li>
-						</ul>
-					</td>
 				</tr>
 				<tr>
 					<td>EPR/IED Groundwater quality/level return</td>
-					<td>
-						<ul class="list">
-							<li><strong>Unit</strong>: use either length (depth), concentration, or physical parameter such as pH, total alkalinity or electrical conductivity.</li>
-							<li><strong>Reference period</strong>: use MEPP, MEPP - up gradient, MEPP - down or cross gradient, or spot sample.</li>
-						</ul>
-					</td>
 				</tr>
 				<tr>
-					<td>
-						<ul>
-							<li>EPR/IED Landfill gas surface emissions</li>
-							<li>EPR/IED Landfill gas perimeter</li>
-							<li>EPR/IED Landfill gas in waste</li>
-							<li>EPR/IED Landfill gas infrastructure monitoring</li>
-						</ul>
-					</td>
-					<td><strong>Unit</strong>: use &percnt;v/v (exceptions - pressures mbr/millibar).</td>
+					<td>EPR/IED Landfill gas surface emissions</td>
 				</tr>
 				<tr>
-					<td>EPR/IED Sewer emissions return</td>
-					<td><strong>Reference period</strong>: use spot sample.</td>
+					<td>EPR/IED Landfill gas perimeter</td>
 				</tr>
 				<tr>
-					<td>EPR/IED ETP or tankering emissions return</td>
-					<td><strong>Reference period</strong>: use spot sample.</td>
+					<td>EPR/IED Landfill gas in waste</td>
 				</tr>
 			</table>
-</div>
+		</div><!-- column-two-thirds -->
+	</div><!-- grid-row -->
+</div><!-- units-and-measures -->
 </main>
 
 

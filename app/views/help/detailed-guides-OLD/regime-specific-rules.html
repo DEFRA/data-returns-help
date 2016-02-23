@@ -1,0 +1,196 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<header class="page-header">
+
+<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+<script src="/public/javascripts/jquery-ui.min.js"></script>
+<script src="/public/javascripts/clipboard.min.js"></script>
+
+</header>
+
+<main id="content" role="main" class="data-exchange-protocol">
+
+
+<div class="phase-banner beta-banner">
+	<p>
+		<strong class="phase-tag">BETA</strong>
+		<span>This is a new service &ndash; your
+			<a href="#">feedback</a> will help us to improve it.</span>
+	</p>
+</div>
+<div class="heading">
+	<p class="type font-medium">Send your data returns online</p>
+	<h1 class="bold-large">Data rules for EPR compliance monitoring</h1>
+</div>
+<div class="grid-row">
+	<div class="column-two-thirds">
+		<aside class="meta metadata-list">
+			<dl>
+				<dt>From:</dt>
+				<dd class="js-hide-extra-metadata">
+					<a class="organisation-link" href="https://www.gov.uk/government/organisations/environment-agency">Environment Agency</a>
+				</dd>
+				<dt>First published:</dt>
+				<dd>
+					<time class="public_timestamp" title="2016-01-13T16:25:00+01:00">13 January 2016</time>
+				</dd>
+				<dt>Last updated:</dt>
+				<dd>
+					<time class="public_timestamp" title="2016-01-13T16:25:00+01:00">13 January 2016</time>,
+					<a class="see-all-updates" href="#history" data-toggle="modal" data-target="#unavailable">see all updates</a>
+				</dd>
+        <dt>Part of:</dt>
+        <dd class="js-hide-extra-metadata">
+					<a href="/" class="collection-link">How to format Environment Agency data</a>
+				</dd>
+			</dl>
+		</aside>
+	</div>
+</div>
+
+<div class="regime-specific-rules">
+	<p>These rules explain how you must prepare and present EPR compliance monitoring data according to each field heading in your file.</p>
+	<p>You must use the short field headings in your file. You can submit data under the short headings in any order.</p>
+<!--	<div class="grid-row">
+	<div class="column-three-quarters"> -->
+		<table>
+			<tr>
+				<th style="width: 15%;">Field</th>
+				<th style="width: 65%;">Description</th>
+				<th style="width: 20%;">Mandatory</th>
+			</tr>
+			<tr>
+				<td>EA_ID</td>
+				<td>
+					<p>EA unique identifier. This uniquely identifies the permit, site or activity for the reading. Give the core permit reference without any separators, slashes or variation numbers:</p>
+					<ul class="list list-bullet">
+						<li>EPR permits format - 2 letters and 4 numbers (eg AB1234).</li>
+						<li>Waste Management Licences format - 5- or 6-figure number (eg 654321).</li>
+					</ul>
+					<p>Submit a separate csv file for each different permit number. Each row of the csv file will repeat the same EA_ID.</p>
+				</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Rtn_Type</td>
+				<td>
+					<p>Return type. Use the <a href="/help/detailed-guides/return-type-rules">return type controlled list</a> to select your return type. You need to apply some specific rules for certain return types.<p>
+					<p>Return types can contain a comma, which confuses software, so you must use double quotes in addition to the usual comma delimiter (eg ”EPR/IED ETP or Tankering emissions return”) to delimit this field in a .csv file.<p>
+					<p>You can return data for more than one return type in a single csv file.<p>
+				</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Mon_Point</td>
+				<td>Monitoring point reference. This is the sampling or emission point at which the sample was taken. Take the name of the monitoring point from your permit (eg Boreholes 1). It contains only letters and numbers. Remove any symbols.</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Mon_Date</td>
+				<td> 
+					<p>Monitoring date/time. This is the date and, where necessary, time for a spot sample. If you’re monitoring for a period of time (eg a week), give the date at the end of the monitoring period.</p>
+					<p>Use the format YYYY-MM-DD hh.mm.ss or DD-MM-YYYY hh.mm.ss. You must give a date in this field, but time is optional.</p>
+				</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Parameter</td>
+				<td>The name of the chemical substance or parameter you’re monitoring. You must take the name from the <a href="/help/detailed-guides/parameters">parameters controlled list</a>.</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>CAS</td>
+				<td>
+					<p>This international standard gives a code for chemical substances. When you select parameter from the <a href="/help/detailed-guides/parameters">controlled list</a> you’ll see a corresponding CAS number (where available) to enter in your data return file.</p>
+					<p>This field can be left blank if there's no CAS number for the parameter.</p>
+				</td>
+				<td>Provide where available</td>
+			</tr>
+			<tr>
+				<td>Value</td>
+				<td>
+					<p>The numerical value of the measurement. This is a number, and you can include the symbols &lt; or &gt;. You can also include zeros. Don’t include any other text characters. Further information (eg "BRT", or "waterlogged") should be put in the Comments field.</p>
+					<p>In a csv file you need to use double quote in addition to the usual comma delimiter, eg "1,4-Dioxane". This is because parameters may also contain a comma, which confuses software.</p>
+				</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Unit</td>
+				<td>
+					<p>The unit for your measurement. You must give emissions readings in :v/v or mg/mg3. Give temperature in DegC. Give pressure in KPa or mBar. See the <a href="/help/detailed-guides/units-and-measures">units and measures controlled list</a>.</p>
+					<p>You cannot leave this field blank. Use “pH” or “meteorological” where appropriate.</p>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Ref_Period</td>
+				<td>The reference period for the sample, as specified in the Permit. (example: Hourly mean). The options are given in the <a href="/help/detailed-guides/reference-periods">reference period controlled list</a></td>
+				<td>Provide where available</td>
+			</tr>
+			<tr>
+				<td>Mon_Period</td>
+				<td>
+					<p>The name of the date range covered by the data return (eg Jan, or Jan-Feb, or Q3 ). See the list of date range terms in the <a href="/help/detailed-guides/date-and-time">date and time rules</a>.
+					<p>Enter data here for monitoring carried out over a period of time. You can leave blank for spot samples. Don’t give the year in this field - you should give that in Mon_Date.</p>
+				</td>
+				<td>Only for returns that cover more than 1 point in time, ie not spot samples</td>
+			</tr>
+			<tr>
+				<td>Meth_Standard</td>
+				<td>You must use a term for  <a href="/help/detailed-guides/monitoring-standard">monitoring standard or method</a> from the controlled list.</td>
+				<td>Provide where available</td>
+			</tr>
+			<tr>
+				<td>Txt_Value</td>
+				<td>A field for text-based qualifiers (eg, dry weight). You can only use a term from the <a href="/help/detailed-guides/qualifiers">text value controlled list</a>.</td>
+				<td>Optional</td>
+			</tr>
+			<tr>
+				<td>Smpl_Ref</td>
+				<td>A reference for the sample. This isn’t mandatory but helps with analysis of results, especially to group measurements together (eg, water sampling). Only use letters and numbers.</td>
+				<td>Optional</td>
+			</tr>
+			<tr>
+				<td>Smpl_By</td>
+				<td>The name of who or what took the sample. Leave this field blank unless you’re required to provide these details in your permit.</td>
+				<td>Optional</td>
+			</tr>
+			<tr>
+				<td>Site Name</td>
+				<td>This field allows EA to cross check your site name against EA_ID. Only use letters and numbers.</td>
+				<td>Optional</td>
+			</tr>
+			<tr>
+				<td>Comments</td>
+				<td>Use this optional field for free text comments about the row of data.</td>
+				<td>Optional</td>
+			</tr>
+		</table>
+	<!-- column-two-thirds </div> -->
+	<!-- grid-row	</div> -->
+	</div><!-- date and time -->
+</main>
+
+
+<!-- Modal -->
+<div class="modal fade" id="unavailable" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        Sorry, this feature isn't currently available as we're still developing this service.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="button" data-dismiss="modal">Go back</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{/content}}
+
+{{/layout}}

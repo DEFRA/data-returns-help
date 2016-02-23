@@ -55,7 +55,8 @@
 </div>
 
 <div class="regime-specific-rules">
-		<p>These rules explain how you must prepare and present EPR compliance monitoring data according to each field heading in your file.</p>
+		<p>These rules explain how you must prepare and present EPR compliance monitoring data according to each field heading in your file. </p>
+		<p>You must use the short field headings in your file. You can submit data under the short headings in any order.</p>
 <!--	<div class="grid-row">
 		<div class="column-three-quarters"> -->
 			<table>
@@ -67,100 +68,89 @@
 				<tr>
 					<td>EA_ID</td>
 					<td>EA Unique Identifier. This field must be completed in all data returns. Give the core permit reference without any separators, slashes or variation numbers.<br>
-					For EPR permits the format should be 2 letters and four numbers. (example. AB1234)<br>
-					For Waste Management Licences it should be a 5 or 6 figure number. (example 654321)<br>
-					Each line of the csv file will repeat the same permit number. A separate csv file should be submitted for each different permit number.</td>
+					* EPR permits - 2 letters and four numbers (eg AB1234)<br>
+					* Waste Management Licences - 5- or 6-figure number (eg 654321)<br>
+					Submit a separate csv file for each different permit number. Each row of the csv file will repeat the same EA_ID.</td>
 					<td>Yes</td>
 				</tr>
 				<tr>
 					<td>Rtn_Type</td>
-					<td>Return Type. This field must be completed. The Return Type must be taken from the <a  href="#1" data-toggle="modal" data-target="#unavailable">return type controlled list</a>. More than one return type can be reported in a single csv file.<br>
-					
-					In a csv file this field should be delimited with a double quote in addition to the usual comma delimiter. This is because the return type can contain a comma, which will confuse the software. An example is given below.
-					,”EPR/IED Sewer, ETP or Tankering emissions return”,</td>
+					<td>Return type. Use the <a href="/help/detailed-guides/return-type">return type controlled list</a> to select your return type. You can return data for more than one return type in a single csv file.
+					</td>
 					<td>Yes</td>
 				</tr>
 				<tr>
 					<td>Mon_Point</td>
-					<td>Monitoring Point Ref. This is a reference to the sample or emission point at which the sample was taken. The name of the monitoring point should be taken from the permit. It should only contain letters and numbers. Any symbols should be removed. 
-					(example Boreholes 1)</td>
+					<td>Monitoring point reference. This is the sampling or emission point at which the sample was taken. Take the name of the monitoring point from your permit (eg Boreholes 1). <br>
+					It contains only letters and numbers. Remove any symbols.</td>
 					<td>Yes</td>
 				</tr>
 				<tr>
 					<td>Mon_Date</td>
-					<td>Monitoring Date/ Time. This is the date and time for a spot sample.
-					If the monitoring is for a period of time (for example a week), provide the date at the end of the monitoring period.
-					It must be supplied on the format YYYY-MM-DD hh.mm.ss, or DD-MM-YYYY hh.mm.ss.
-					This field must be completed, but the seconds are optional.</td>
+					<td>Monitoring date/time. This is the date and, where necessary, time for a spot sample. If you're monitoring for a period of time (eg a week), give the date at the end of the monitoring period.<br>
+					Use the format YYYY-MM-DD hh.mm.ss or DD-MM-YYYY hh.mm.ss. You must give a date in this field, but time is optional. <a href="/help/detailed-guides/date-and-time">See further guidance on date and time</a>.</td>
 					<td>Yes</td>
 				</tr>
 				<tr>
 					<td>Parameter</td>
-					<td>The name of the chemical substance or parameter that is being measured. The name must be taken from the <a href="/help/detailed-guides/parameters">parameter controlled list</a>.</td>
+					<td>The name of the chemical substance or parameter you're monitoring. You must take the name from the <a href="/help/detailed-guides/parameters">parameters controlled list</a>.</td>
 					<td>Yes</td>
 				</tr>
 				<tr>
 					<td>CAS</td>
-					<td>The CAS number is an international standard code for chemical substances. When parameter is selected from the list, the corresponding CAS number should be entered in this field.
-					This field can be left blank if there is no CAS number for the parameter.</td>
-					<td>Must be provided where available</td>
+					<td>This international standard gives a code for chemical substances. When you select parameters from the <a href="/help/detailed-guides/parameters">controlled list</a> you'll see a corresponding CAS number (where available) to enter in your data return file.</td>
+					<td>Provide where possible</td>
 				</tr>
 				<tr>
 					<td>Value</td>
-					<td>The numerical value of the measurement. This should be a number. It can include blanks or zeros. It can also include the symbols &lt; or &gt;.
-					No other text characters are allowed. Any other text, for example "BRT", or "waterlogged", should be put in the Comment heading.
-					In a csv file this field should be delimited with a double quote in addition to the usual comma delimiter. This is because many parameters also contain a comma, which will confuse the software. An example is given below.
-					,"1,4-Dioxane",</td>
+					<td>The numerical value of the measurement. This is a number and you can include the symbols &lt; or &gt;. You can also include zeros. Don’t include any other text characters. <br>
+					Further information (eg "BRT", or "waterlogged") should be put in the Comments field. <br>
+					In a csv file you need to use double quote in addition to the usual comma delimiter, eg "1,4-Dioxane". This is because parameters may also contain a comma, which confuses software.</td>
 					<td>Yes</td>
 				</tr>
 				<tr>
 					<td>Unit</td>
-					<td>The unit in which the measurement was taken. This field must be completed. 
-					Emissions readings should be provided in :v/v or mg/mg3
-					Temperature should be provided in DegC
-					Pressure should be provided in KPa or mBar.
-					All units must be taken from the <a href="/help/detailed-guides/units-and-measures">units and measures controlled list</a>.
+					<td>The unit for your measurement. You must give emissions readings in :v/v or mg/mg3. Give temperature in DegC. Give pressure in KPa or mBar.<br>
+					See the <a href="/help/detailed-guides/units-and-measures">units and measures controlled list</a>.
 					
-					There are two measures that do not normally have a unit. The field cannot be left blank so for pH please provide the unit as pH, and for meteorological measurements please provide the unit as “meteorological”.</td>
+					You cannot leave this field blank. Use 'pH' or 'meteorological' where appropriate.</td>
 					<td>Yes</td>
 				</tr>
 				<tr>
 					<td>Ref_Period</td>
-					<td>The reference period for the sample, as specified in the Permit.  (example: Hourly mean). 
-					The options are given in the <a href="/help/detailed-guides/reference-periods">reference period controlled list</a></td>
-					<td>Must be provided where available</td>
+					<td>The reference period for the sample, as specified in the Permit. (example: Hourly mean). Select an entry from the <a href="/help/detailed-guides/reference-periods">reference period controlled list</a>.</td>
+					<td>Provide where possible</td>
 				</tr>
 				<tr>
 					<td>Mon_Period</td>
-					<td>The monitoring period name is the name of date range covered by the data return (for example Jan, or Jan-Feb, or Q3 ). Further definition of date range terms is given in the <a href="/help/detailed-guides/date-and-time">date and time rules</a>.
-					This field only applies to monitoring carried out over a period of time, and it can be left blank for spot samples.
-					The year does not need to be provided in this field, because you will have entered it in Mon_Date.
+					<td>The name of the date range covered by the data return (eg Jan, or Jan-Feb, or Q3 ). See the list of date range terms in the <a href="/help/detailed-guides/date-and-time">date and time rules</a>. <br>
+					Enter data here for monitoring carried out over a period of time. You can leave blank for spot samples. Don't give the year in this field - you should give that in Mon_Date.
 					</td>
-					<td>Only for returns that cover more than one point in time i.e. are not spot samples</td>
+					<td>Only for returns that cover more than 1 point in time - ie not spot samples</td>
 				</tr>
 				<tr>
 					<td>Method</td>
-					<td>A list of Test Methodologies and Standards is given in the <a href="/help/detailed-guides/monitoring-standard">monitoring method and standards rules</a>. This information should be included where applicable.</td>
-					<td>Must be provided where available</td>
+					<td>You must use a term for monitoring standard or method from the <a href="/help/detailed-guides/monitoring-standard">controlled list</a>.</td>
+					<td>Provide where possible</td>
 				</tr>
 				<tr>
 					<td>Smpl_Ref</td>
-					<td>A reference for the sample can be provided here, to help with analysis of the results. Only letter of numbers are allowed. This field is optional and can be left blank.</td>
+					<td>A reference for the sample. Not mandatory but helps with analysis of results, especially to group measurements together (eg, water sampling). Only use letters and numbers.</td>
 					<td>Optional</td>
 				</tr>
 				<tr>
 					<td>Smpl_By</td>
-					<td>The name of who of what the sample was taken by. This field should be left blank unless there is a specific requirement to provide these details, e.g. some permits require you to give the make and model of the monitoring equipment.</td>
+					<td>The name of who or what took the sample. Leave this field blank unless you're required to provide these details in your permit.</td>
 					<td>Optional</td>
 				</tr>
 				<tr>
-					<td>Site Name</td>
-					<td>The permit number should allow us to identify the site, but this field allows us to cross check that information. The site name should only contain letters and numbers.</td>
+					<td>Site_Name</td>
+					<td>This field allows EA to cross check your site name against EA_ID. Only use letters and numbers.</td>
 					<td>Optional</td>
 				</tr>
 				<tr>
 					<td>Comments</td>
-					<td>This is an optional field, allowing free text comments about the row of data.</td>
+					<td>Use this optional field for free text comments about the row of data.</td>
 					<td>Optional</td>
 				</tr>
 			</table>

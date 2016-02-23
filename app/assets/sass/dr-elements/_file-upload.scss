@@ -1,0 +1,83 @@
+// File upload
+.file-upload {
+	.well {
+		margin-bottom:30px;
+		.button-choose-file {
+			margin:15px 0;
+		}
+	}
+	#banner-notification {
+		margin-top:15px;
+	}
+}
+ 
+.file-summary {
+	margin-top:0;
+	margin-bottom:30px;
+	p {
+		.name	{
+			font-weight: bold;
+		}
+	}
+	.title {
+		font-weight:600;
+		margin-bottom:0;
+	}
+}
+ 
+.help-text-reg {
+	margin-bottom:30px;
+}
+
+.button-get-started {
+  background-image: url("/public/images/icons/icon-pointer.png");
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    margin-bottom:15px;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+    
+}
+
+.statusbar {
+	border-top: none;
+	border-bottom:1px solid #BFC1C3;
+	border-left: 4px solid #fff;
+	min-height: 25px;
+	width: auto;
+	padding: 10px 0 5px 10px;
+	vertical-align: top;
+	font-size: 16px;
+}
+
+.filename {
+	display: inline-block;
+	vertical-align: top;
+	width: 190px;
+	min-height:25px;
+	max-height: 50px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.filename.file-label {
+	font-weight:600;
+}
