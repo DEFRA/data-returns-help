@@ -67,10 +67,14 @@
 				</tr>
 				<tr>
 					<td>EA_ID</td>
-					<td>EA Unique Identifier. This field must be completed in all data returns. Give the core permit reference without any separators, slashes or variation numbers.<br>
-					* EPR permits - 2 letters and four numbers (eg AB1234)<br>
-					* Waste Management Licences - 5- or 6-figure number (eg 654321)<br>
-					Submit a separate csv file for each different permit number. Each row of the csv file will repeat the same EA_ID.</td>
+					<td>
+						<p>EA Unique Identifier. This field must be completed in all data returns. Give the core permit reference without any separators, slashes or variation numbers.</p>
+						<ul class="list list-bullet">
+							<li>EPR permits - 2 letters and four numbers (eg AB1234)</li>
+							<li>Waste Management Licences - 5- or 6-figure number (eg 654321)</li>
+						</ul>
+						<p>Submit a separate csv file for each different permit number. Each row of the csv file will repeat the same EA_ID.</p>
+					</td>
 					<td>Yes</td>
 				</tr>
 				<tr>
@@ -81,14 +85,15 @@
 				</tr>
 				<tr>
 					<td>Mon_Point</td>
-					<td>Monitoring point reference. This is the sampling or emission point at which the sample was taken. Take the name of the monitoring point from your permit (eg Boreholes 1). <br>
-					It contains only letters and numbers. Remove any symbols.</td>
+					<td><p>Monitoring point reference. This is the sampling or emission point at which the sample was taken. Take the name of the monitoring point from your permit (eg Boreholes 1).</p>
+						<p>It contains only letters and numbers. Remove any symbols.</p></td>
 					<td>Yes</td>
 				</tr>
 				<tr>
 					<td>Mon_Date</td>
-					<td>Monitoring date/time. This is the date and, where necessary, time for a spot sample. If you're monitoring for a period of time (eg a week), give the date at the end of the monitoring period.<br>
-					Use the format YYYY-MM-DD hh.mm.ss or DD-MM-YYYY hh.mm.ss. You must give a date in this field, but time is optional. <a href="/help/detailed-guides/date-and-time">See further guidance on date and time</a>.</td>
+					<td>
+						<p>Monitoring date/time. This is the date and, where necessary, time for a spot sample. If you're monitoring for a period of time (eg a week), give the date at the end of the monitoring period.</p>
+						<p>Use the format YYYY-MM-DD hh.mm.ss or DD-MM-YYYY hh.mm.ss. You must give a date in this field, but time is optional. <a href="/help/detailed-guides/date-and-time">See further guidance on date and time</a>.</p></td>
 					<td>Yes</td>
 				</tr>
 				<tr>
@@ -98,22 +103,23 @@
 				</tr>
 				<tr>
 					<td>CAS</td>
-					<td>This international standard gives a code for chemical substances. When you select parameters from the <a href="/help/detailed-guides/parameters">controlled list</a> you'll see a corresponding CAS number (where available) to enter in your data return file.</td>
+					<td>This international standard gives a code for chemical substances. When you <a href="/help/detailed-guides/parameters">select parameters</a> from the controlled list you'll see a corresponding CAS number (where available) to enter in your data return file.</td>
 					<td>Provide where possible</td>
 				</tr>
 				<tr>
 					<td>Value</td>
-					<td>The numerical value of the measurement. This is a number and you can include the symbols &lt; or &gt;. You can also include zeros. Don’t include any other text characters. <br>
-					Further information (eg "BRT", or "waterlogged") should be put in the Comments field. <br>
-					In a csv file you need to use double quote in addition to the usual comma delimiter, eg "1,4-Dioxane". This is because parameters may also contain a comma, which confuses software.</td>
+					<td>
+						<p>The numerical value of the measurement. This is a number and you can include the symbols &lt; or &gt;. You can also include zeros. Don’t include any other text characters.<br>
+							Further information (eg "BRT", or "waterlogged") should be put in the Comments field. </p>
+						<p>In a csv file you need to use double quote in addition to the usual comma delimiter, eg "1,4-Dioxane". This is because parameters may also contain a comma, which confuses software.</p></td>
 					<td>Yes</td>
 				</tr>
 				<tr>
 					<td>Unit</td>
-					<td>The unit for your measurement. You must give emissions readings in :v/v or mg/mg3. Give temperature in DegC. Give pressure in KPa or mBar.<br>
-					See the <a href="/help/detailed-guides/units-and-measures">units and measures controlled list</a>.
-					
-					You cannot leave this field blank. Use 'pH' or 'meteorological' where appropriate.</td>
+					<td>
+						<p>The unit for your measurement. You must give emissions readings in :v/v or mg/mg3. Give temperature in DegC. Give pressure in KPa or mBar.<br>
+						You cannot leave this field blank. Use 'pH' or 'meteorological' where appropriate.</p>
+						<p>See the <a href="/help/detailed-guides/units-and-measures">units and measures controlled list</a>.</p></td>
 					<td>Yes</td>
 				</tr>
 				<tr>
@@ -123,14 +129,16 @@
 				</tr>
 				<tr>
 					<td>Mon_Period</td>
-					<td>The name of the date range covered by the data return (eg Jan, or Jan-Feb, or Q3 ). See the list of date range terms in the <a href="/help/detailed-guides/date-and-time">date and time rules</a>. <br>
-					Enter data here for monitoring carried out over a period of time. You can leave blank for spot samples. Don't give the year in this field - you should give that in Mon_Date.
+					<td>
+						<p>The name of the date range covered by the data return (eg Jan, or Jan-Feb, or Q3).</p>
+						<p>Use the <a href="/help/detailed-guides/monitoring-frequency">monitoring period controlled list</a> to enter data here for monitoring carried out over a period of time. You can leave blank for spot samples. Don't give the year in this field - you should give that in Mon_Date.</p>
+						<p>See the list of date range terms in the <a href="/help/detailed-guides/date-and-time">date and time rules</a>.</p>
 					</td>
 					<td>Only for returns that cover more than 1 point in time - ie not spot samples</td>
 				</tr>
 				<tr>
 					<td>Method</td>
-					<td>You must use a term for monitoring standard or method from the <a href="/help/detailed-guides/monitoring-standard">controlled list</a>.</td>
+					<td>You must use a term for <a href="/help/detailed-guides/monitoring-standard">monitoring standard or method</a> from the controlled list.</td>
 					<td>Provide where possible</td>
 				</tr>
 				<tr>
