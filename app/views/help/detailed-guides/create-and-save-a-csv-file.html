@@ -1,0 +1,248 @@
+{{<layout}}
+
+{{$pageTitle}}
+	Send your data returns online
+{{/pageTitle}}
+
+{{$content}}
+
+<header class="page-header">
+
+<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+<script src="/public/javascripts/jquery-ui.min.js"></script>
+<script src="/public/javascripts/clipboard.min.js"></script>
+
+</header>
+
+<main id="content" role="main" class="data-exchange-protocol">
+
+
+<div class="phase-banner beta-banner">
+	<p>
+		<strong class="phase-tag">BETA</strong>
+		<span>This is a new service &ndash; your <a href="#">feedback</a> will help us to improve it.</span>
+	</p>
+</div>
+<div class="heading">
+	<p class="type font-medium">Send your data returns online</p>
+	<h1 class="bold-large">Date and time</h1>
+</div>
+<div class="grid-row">
+	<div class="column-two-thirds">
+		<aside class="meta metadata-list">
+			<dl>
+				<dt>From:</dt>
+				<dd class="js-hide-extra-metadata">
+					<a class="organisation-link" href="https://www.gov.uk/government/organisations/environment-agency">Environment Agency</a>
+				</dd>
+				<dt>First published:</dt>
+				<dd>
+					<time class="public_timestamp" title="2016-01-13T16:25:00+01:00">13 January 2016</time>
+				</dd>
+				<dt>Last updated:</dt>
+				<dd>
+					<time class="public_timestamp" title="2016-01-13T16:25:00+01:00">13 January 2016</time>,
+					<a class="see-all-updates" href="#history" data-toggle="modal" data-target="#unavailable">see all updates</a>
+				</dd>
+        <dt>Part of:</dt>
+        <dd class="js-hide-extra-metadata">
+					<a href="/" class="collection-link">How to format Environment Agency data</a>
+				</dd>
+			</dl>
+		</aside>
+	</div>
+</div>
+
+<div class="date-and-time">
+	<p class="lede">Use these date and time standards for consistency and to reduce errors and ambiguity in your data returns.</p>
+		<div class="grid-row">
+			<div class="column-third">
+				  <nav class="contextual-info" id="page-navigation">
+					<h1>Contents</h1>
+						<ol class="dash-list">
+							<li><a href="#character-definitions">Character definitions</a></li>
+							<li><a href="#date-format">Date format</a></li>
+							<li><a href="#time-format">Time format</a></li>
+							<li><a href="#date-and-time-format">Date and time format</a></li>
+							<li><a href="#reduced-precision-formats">Reduced precision formats</a></li>
+							<li><a href="#date-and-time-range">Date and time range</a></li>
+							<li><a href="#date-range-terms">Date range terms</a></li>
+							<li><a href="#date-and-time-in-it-software">Date and time in IT software</a></li>
+						</ol>
+					</nav>
+			</div>
+			<div class="column-two-thirds">
+			<h3 id="character-definitions" class="heading-medium">Character definitions</h3>
+			<p>Use the following character definitions in this service:</p>
+				<ul class="list list-bullet">
+					<li><code>Y</code> represents a digit used in the time element year</li>
+					<li><code>M</code> represents a digit used in the time element month</li>
+					<li><code>D</code> represents a digit used in the time element day</li>
+					<li><code>h</code> represents a digit used in the time element hour</li>
+					<li><code>m</code> represents a digit used in the time element minute</li>
+					<li><code>s</code> represents a digit used in the time element second</li>
+					<li>T represents the start of the time component of a recorded date and time</li>
+				</ul>
+				
+			<h3 id="date-format" class="heading-medium">Date format</h3>
+			<p>Record a date as YYYY-MM-DD where:</p>
+			<ul class="list list-bullet">
+				<li><code>YYYY</code> is the full 4-digit year</li>
+				<li><code>MM</code> is the 2-digit calendar month number from 01 to 12, with a leading 0 inserted for the months of January to September, eg 01 for January</li>
+				<li><code>DD</code> is the calendar day from 01 to 31 (01 to 30 for April, June, September and November and 01 to 28 for February with 29 in a leap year) with a leading 0 inserted for days before the 10th day of a month, eg 02 for 2 January</li>
+				<li>the separator character is a hyphen '-'</li>
+				<li>eg 3 September 1972 is recorded as 1972-09-03</li>
+			</ul>
+		
+			<h3 id="time-format" class="heading-medium">Time format</h3>
+			<p>Record a time as hh:mm:ss where:</p>
+			<ul class="list list-bullet">
+				<li><code><code>hh</code></code> is the full 2-digit hour using the 24-hour clock that runs from 00 to 23 with a leading 0 inserted for the hours before 10am, eg 07 for 7am</li>
+				<li><code>mm</code> is the full 2-digit minute that runs from 00 to 60 with a leading 0 inserted for the minutes before 10 minutes, eg 06 for 6 minutes</li>
+				<li><code>ss</code> is the full 2-digit second that runs from 00 to 60, with a leading 0 inserted for the seconds before 10 seconds, eg 02 for 2 seconds</li>
+				<li>the separator character is a colon ':'</li>
+				<li>examples: 4 seconds past 7:13am is recorded as 07:13:04; seconds past 11:04pm is recorded as 23:04:10</li>
+			</ul>
+			
+			<h3 id="date-and-time-format" class="heading-medium">Date and time format</h3>
+			<p>Record date and time together as YYYY-MM-DDThh:mm:ss (although the T may be dropped and replaced with a single space, ie YYYY-MM-DD hh:mm:ss) where:</p>
+			<ul class="list list-bullet">
+				<li>date is recorded as above</li>
+				<li>time is recorded as above</li>
+				<li>a T is inserted between the date and time</li>
+				<li>examples: 4 seconds past 7:13am on 3 September 1972 is recorded as 1972-09-02T07:13:04; 10 seconds past 11:04pm on 16 December 2013 is recorded as 2013-12-16T23:04:10</li>
+			</ul>
+			
+			<h3 id="reduced-precision-formats" class="heading-medium">Reduced precision formats</h3>
+			<p>If you don't have to give a precise date and time (or it's not actually known), you can amend the full <a href="#_Date_and_Time">date and time</a> format by omitting digits and characters, starting from the extreme right-hand side.</p>
+			<p>This has the effect of reducing the precision of the recorded date and time.</p>
+			<p>Examples:</p>
+			<table>
+				<tr>
+					<th>Situation</th>
+					<th>Action</th>
+					<th>Example</th>
+				</tr>
+				<tr>
+					<td>If you need the exact date and time to the nearest second</td>
+					<td>Record full date and time</td>
+					<td>2013-09-03 12:01:56</td>
+				</tr>
+				<tr>
+					<td>If you need the date and time to the nearest minute</td>
+					<td>Omit seconds from the time element</td>
+					<td>2013-09-03 12:01</td>
+				</tr>
+				<tr>
+					<td>If you need the date and time to the nearest hour</td>
+					<td>Omit seconds from the time element</td>
+					<td>2013-09-03 12</td>
+				</tr>
+				<tr>
+					<td>If you need the date to the nearest day</td>
+					<td>Omit the time element</td>
+					<td>2013-09-03</td>
+				</tr>
+				<tr>
+					<td>If you need the date to the nearest month</td>
+					<td>Omit the day and time elements</td>
+					<td>2013-09</td>
+				</tr>
+				<tr>
+					<td>If you need the year</td>
+					<td>Omit the month, day and time elements</td>
+					<td>2013</td>
+				</tr>
+			</table>
+			
+			<h3 id="date-and-time-range" class="heading-medium">Date and time range</h3>
+			<p>Use the format above for the time of the start interval and again for the end interval with a forward slash / as a separator character. Eg YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</p> 
+			<p>You can also use <a href="#_Reduced_Precision_Formats">reduced precision formats</a> in date and time ranges.</p>
+			<p>Examples:</p>
+			<table border="1" cellpadding="0" cellspacing="0" width="523">
+				<tr>
+					<th>Situation</th>
+					<th>Action</th>
+					<th>Example</th>
+				</tr>
+				<tr>
+					<td>If you need the exact date and time range to the nearest second</td>
+					<td>Record full dates and times with the slash separator</td>
+					<td>2013-09-03T12:01:56/2014-09-04T 12:30:04</td>
+				</tr>
+				<tr>
+					<td>If you need the date and time range to the nearest minute</td>
+					<td>Omit seconds from the time element</td>
+					<td>2013-09-03T12:01/2014-09-04T12:30</td>
+				</tr>
+				<tr>
+					<td>If you need the date range to the nearest day</td>
+					<td>Omit the time element</td>
+					<td>2013-09-03/2014-09-04</td>
+				</tr>
+				<tr>
+					<td>If you need the date range to the nearest month</td>
+					<td>Omit the day and time elements</td>
+					<td>2013-09/2014-09</td>
+				</tr>
+				<tr>
+					<td>If you need the range from year to year</td>
+					<td>Omit the day, month and time elements</td>
+					<td>2013/2014</td>
+				</tr>
+			</table>
+			
+			<h3 id="date-range-terms" class="heading-medium">Date range terms</h3>
+			<p>Date Range terms and their meanings are as follows:</p>
+			<table>
+				<tr>
+					<th>Term</th>
+					<th>Meaning</th>
+				</tr>
+				<tr>
+					<td>Quarter 1</td>
+					<td>Jan-Mar YYYY</td>
+				</tr>
+				<tr>
+					<td>Quarter 2</td>
+					<td>Apr-Jun YYYY</td>
+				</tr>
+				<tr>
+					<td>Quarter 3</td>
+					<td>Jul-Sep YYYY</td>
+				</tr>
+				<tr>
+					<td>Quarter 4</td>
+					<td>Oct-Dec YYYY</td>
+				</tr>
+				<tr>
+					<td>First half of the year</td>
+					<td>Jan-Jun YYYY</td>
+				</tr>
+				<tr>
+					<td>Second half of the year</td>
+					<td>Jul-Dec YYYY</td>
+				</tr>
+				<tr>
+					<td>Calendar year</td>
+					<td>YYYY</td>
+				</tr>
+				<tr>
+					<td>Financial year</td>
+					<td>YY/YY or YYYY/YY</td>
+				</tr>
+			</table>
+			
+			<h3 id="date-and-time-in-it-software" class="heading-medium">Date and time in IT software</h3>
+			<p>Don't store date and time data in databases as strings or digits but in the pre-defined date and time format of the database software concerned.</p> 
+			<p>Client software interfacing with the database must display and transfer date and time data in a way that's consistent with this service.</p>
+			<h3>Documents</h3>
+			<p>BS ISO 8601:2004 - Representation of dates and times. See the DMMI National Lead for Data Standards for this external standard if you require it.</p>
+		</div><!-- column-two-thirds -->
+	</div><!-- grid-row -->
+	</div><!-- date and time -->
+</main>
+
+{{/content}}
+
+{{/layout}}
