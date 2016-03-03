@@ -70,16 +70,16 @@
 					<td>
 						<p>EA unique identifier. You must complete this field in all data returns. Give the core permit reference without any separators, slashes or variation numbers.</p>
 						<ul class="list list-bullet">
-							<li>EPR permits - 2 letters and four numbers (eg AB1234)</li>
-							<li>Waste Management Licences - 5- or 6-figure number (eg 654321)</li>
+							<li>EPR permits - 2 letters and 4 numbers (eg, AB1234)</li>
+							<li>Waste Management Licences - 5- or 6-figure number (eg, 654321)</li>
 						</ul>
-						<p>Submit a separate CSV file for each different permit number. Each row of the CSV file will repeat the same EA_ID.</p>
+						<p>Submit a separate CSV file for each different permit or licence number. Each row of the CSV file will repeat the same EA_ID.</p>
 					</td>
 					<td>Yes</td>
 				</tr>
 				<tr>
 					<td>Rtn_Type</td>
-					<td>Type of data return. Use the <a href="/help/detailed-guides/return-type">return type controlled list</a>. You can return data for more than 1 return type in a single CSV file.
+					<td>Type of data return. Use the <a href="/help/detailed-guides/return-type">return type controlled list</a>. You can return data for more than 1 return type in a single CSV file. There are also some <a href="/help/detailed-guides/return-type-rules">return type specific rules</a> to follow.
 					</td>
 					<td>Yes</td>
 				</tr>
@@ -92,13 +92,13 @@
 				<tr>
 					<td>Mon_Date</td>
 					<td>
-						<p>Monitoring date/time. This is the date and, where necessary, time for a spot sample. If you're monitoring for a period of time (eg a week), give the date at the end of the monitoring period.</p>
-						<p>Use the format YYYY-MM-DDThh.mm.ss. You must give a date in this field, but time is optional. If you're giving time then you must use a T between date and time, without spaces. <a href="/help/detailed-guides/date-and-time">See further guidance on date and time</a>.</p></td>
+						<p>Monitoring date/time. This is the date and, where necessary, time for a spot sample. If you're monitoring for a period of time (eg a week), give the date at the end of the monitoring period.</br>
+				Use the format YYYY-MM-DDThh:mm:ss or DD-MM-DDThh:mm:ss. You must give a date in this field, but time is optional. If you're giving time then you must use a T between date and time, without spaces. <a href="/help/detailed-guides/date-and-time">See further guidance on date and time</a>.</p></td>
 					<td>Yes</td>
 				</tr>
 				<tr>
 					<td>Parameter</td>
-					<td>Chemical substance or parameter you're monitoring. You must take the name from the <a href="/help/detailed-guides/parameters">parameters controlled list</a>.</td>
+					<td><p>Chemical substance or parameter you're monitoring. You must take the name from the <a href="/help/detailed-guides/parameters">parameters controlled list</a>.<br>A CSV file will insert double quotes if the parameter name includes a comma, eg "1,4-Dioxane".</p></td>
 					<td>Yes</td>
 				</tr>
 				<tr>
@@ -110,8 +110,8 @@
 					<td>Value</td>
 					<td>
 						<p>Numerical value of your measurement. As well as numbers you can include the symbols &lt; or &gt;. You can also include zeros. Don’t include any other text characters.<br>
-							Further information (eg BRT, or waterlogged) should be put in the Comments field. </p>
-						<p>In a CSV file you need to use double quotes in addition to the usual comma delimiter, eg "1,4-Dioxane". This is because parameters may also contain a comma, which confuses software.</p></td>
+							Further information (eg BRT, or waterlogged) should be put in the Comments field.</p>
+						></td>
 					<td>Yes</td>
 				</tr>
 				<tr>
@@ -119,28 +119,33 @@
 					<td>
 						<p>Unit of your measurement. You must give emissions readings in :v/v or mg/mg3. Give temperature in DegC. Give pressure in KPa or mBar.<br>
 						You cannot leave this field blank. Use 'pH' or 'meteorological' where appropriate.</p>
-						<p>See the <a href="/help/detailed-guides/units-and-measures">units and measures controlled list</a>.</p></td>
+						<p>You must select an entry from the <a href="/help/detailed-guides/units-and-measures">units and measures controlled list</a>.</td>
 					<td>Yes</td>
 				</tr>
 				<tr>
 					<td>Ref_Period</td>
-					<td>Reference period for the sample, as specified in the Permit. (example: Hourly mean). Select an entry from the <a href="/help/detailed-guides/reference-periods">reference period controlled list</a>.</td>
+					<td>Reference period for the sample, as specified in the permit or licence (eg, Hourly mean). You must select an entry from the <a href="/help/detailed-guides/reference-periods">reference period controlled list</a> if you give a reference period.</td>
 					<td>Provide where possible</td>
 				</tr>
 				<tr>
 					<td>Mon_Period</td>
 					<td>
 						<p>Standard name for the date range covered by the data return (eg Jan, or Jan-Feb, or Q3).</p>
-						<p>Use the <a href="/help/detailed-guides/monitoring-period">monitoring period controlled list</a> to enter data here for monitoring carried out over a period of time. You can leave blank for spot samples. Don't give the year in this field - you should give that in Mon_Date.</p>
+						<p>You must select an entry from the <a href="/help/detailed-guides/monitoring-period">monitoring period controlled list</a> to enter data here for monitoring carried out over a period of time. You can leave blank for spot samples. Don't give the year in this field - you should give that in Mon_Date.</p>
 						<p>See the list of date range terms in the <a href="/help/detailed-guides/date-and-time">date and time rules</a>.</p>
 					</td>
-					<td>Only for returns that cover more than 1 point in time - ie not spot samples</td>
+					<td>Only for returns that cover more than 1 point in time - ie, not spot samples</td>
 				</tr>
 				<tr>
 					<td>Meth_Stand</td>
-					<td>Method or standard used for monitoring. You must use a term from the <a href="/help/detailed-guides/monitoring-standard">monitoring standard or method controlled </a>.</td>
+					<td>Method or standard used for monitoring. You must use a term from the <a href="/help/detailed-guides/monitoring-standard">monitoring standard or method controlled list</a>.</td>
 					<td>Provide where possible</td>
 				</tr>
+        <tr>
+          <td>Txt_Value</td>
+          <td>A field for text-based qualifiers (eg, dry weight). You can only use a qualifier from the <a href="/help/detailed-guides/qualifiers">text value controlled list</a>.</td>
+          <td>Optional</td>
+        </tr>
 				<tr>
 					<td>Smpl_Ref</td>
 					<td>Reference for the sample. Not mandatory but helps with analysis of results, especially to group measurements together (eg, water sampling). Only use letters and numbers.</td>
@@ -148,17 +153,17 @@
 				</tr>
 				<tr>
 					<td>Smpl_By</td>
-					<td>The name of who or what took the sample. Leave this field blank unless you're required to provide these details in your permit.</td>
+					<td>The name of who or what took the sample. Leave this field blank unless you're required to provide these details in your permit or licence.</td>
 					<td>Optional</td>
 				</tr>
 				<tr>
 					<td>Site_Name</td>
-					<td>This field allows EA to cross check your site name against EA_ID. Only use letters and numbers. Avoid single commas or replace them with double quotes before your save as CSV.</td>
+					<td>This field allows EA to cross check your site name against EA_ID. Only use letters and numbers. Remove unnecessary commas before you save as CSV.</td>
 					<td>Optional</td>
 				</tr>
 				<tr>
 					<td>Comments</td>
-					<td>Use this optional field for free-text comments about the row of data.</td>
+					<td>Use this optional field for free-text comments about the row of data. Avoid unncessary commas.</td>
 					<td>Optional</td>
 				</tr>
 			</table>
