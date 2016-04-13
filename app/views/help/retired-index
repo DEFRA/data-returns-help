@@ -33,7 +33,7 @@
 					</dd>
 					<dt>First published:</dt>
 					<dd>
-						<time class="date" datetime="2016-01-13T16:25:00+01:00">08 April 2016</time>
+						<time class="date" datetime="2016-01-13T16:25:00+01:00">13 January 2016</time>
 					</dd>
 				</dl>
 			</aside>
@@ -47,6 +47,9 @@
 					<ol class="dash-list">
 						<li>
 							<a href="#data-rules">Environmental Permitting Regulations (EPR) data rules and return type rules</a>
+						</li>
+						<li>
+							<a href="#general-rules">General rules: time and symbols</a>
 						</li>
 						<li>
 							<a href="#agreed-lists">Controlled lists</a>
@@ -63,6 +66,7 @@
 			<ul class="list list-number">
 				<li>apply rules to correctly format data under <a href="/help/detailed-guides/regime-specific-rules">Environmental Permitting Regulations (EPR)</a></li>
 				<li>check if there are any further rules that apply to <a href="/help/detailed-guides/return-type-rules">specific return types</a></li>
+				<li>check if you need to apply general rules on allowable formats, eg for symbols</li>
 				<li>save your data file as CSV</li>
 			</ul>
 			<p><a href="#7" data-toggle="modal" data-target="#unavailable"></a></p>
@@ -127,6 +131,41 @@
 					</ol>
 				</div>
 			</section>
+			<section class="group" id="document_collection">
+				<div class="editions">
+					<h2 id="general-rules">General rules: time and symbols</h2>
+					<div class="group-body">
+						<div class="govspeak">
+							<p>Use these rules on how to format date and time in your data returns to meet Environment Agency standards.</p>
+						</div>
+					</div>
+					<ol class="document-list">
+						<li class="publication document-row" id="publication_358572">
+							<h3>
+								<a href="/help/detailed-guides/date-and-time">Date and time</a>
+							</h3>
+							<ul class="attributes">
+								<li class="date">
+									<time class="public_timestamp" title="2016-01-13T16:25:00+01:00">13 January 2016</time>
+								</li>
+								<li class="display-type attribute">Guidance</li>
+							</ul>
+						</li>
+						<li class="publication document-row" id="publication_293000">
+							<h3>
+								<a href="/help/detailed-guides/symbols">Symbols</a>
+							</h3>
+							<ul class="attributes">
+								<li class="date">
+									<time class="public_timestamp" title="2016-01-13T16:25:00+01:00">13 January 2016</time>
+								</li>
+								<li class="display-type attribute">Guidance</li>
+							</ul>
+						</li>
+					</ol>
+				</div>
+			</section>
+
 			<section class="group" id="document_collection">
 				<div class="editions">
 					<h2 id="agreed-lists">Controlled lists</h2>
