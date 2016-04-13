@@ -15,3 +15,14 @@
 .single-column {
 	width:inherit;
 }
+
+// Example file
+.example-file {
+  width:100%;
+  margin-bottom:60px;
+  table {
+    th, td {
+      white-space: nowrap;
+    }
+  }
+}

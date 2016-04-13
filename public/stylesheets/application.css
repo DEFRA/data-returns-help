@@ -2666,6 +2666,15 @@ input.validation-code {
   width: inherit;
 }
 
+.example-file {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.example-file table th, .example-file table td {
+  white-space: nowrap;
+}
+
 /* REQUIRED for core functionality of tab.js */
 .responsive-tabs__heading {
   display: none;
