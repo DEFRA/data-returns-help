@@ -64,7 +64,7 @@
   <h2 class="heading-medium" id="EPR-compliance-monitoring-rules">EPR compliance monitoring rules</h2>
 		<p>These rules explain how you must prepare and present EPR compliance monitoring data according to each field heading in your file. </p>
 		<p>You must use the short field headings in your file. You can send data under the short headings in any order.</p>
-    <p>Some fields are mandatory for all data returns. Where possible you should give data for other fields as specified in your licence and particular type of return. There are a few fields that are optional for all operators so you can choose whether or not to send data under these headings. </p>
+    <p>Some fields are mandatory for all data returns. Where possible you should give data for other fields as specified in your permit or licence and particular type of return. There are a few fields that are optional for all operators so you can choose whether or not to send data under these headings. </p>
 <!--	<div class="grid-row">
 		<div class="column-three-quarters"> -->
 			<table>
@@ -81,7 +81,7 @@
 							<li>EPR permits - 2 letters and 4 numbers (eg, AB1234)</li>
 							<li>Waste Management Licences - 5- or 6-figure number (eg, 654321)</li>
 						</ul>
-						<p>You can send data returns for multiple permits or licence numbers in one CSV file. But make sure your file is no larger than around 2MB.</p>
+						<p>You can send data returns for multiple permits or licence numbers in 1 CSV file. Make sure your file is no larger than 2MB.</p>
 					</td>
 					<td>Yes</td>
 				</tr>
@@ -107,7 +107,7 @@
 				</tr>
 				<tr>
 					<td>Parameter</td>
-					<td><p>Chemical substance or parameter you're monitoring. You must take the name from the <a href="/help/detailed-guides/parameters">parameters controlled list</a>.<br>A CSV file will insert double quotes if the parameter name includes a comma, eg "1,4-Dioxane". You cannot give comments in the parameter field. Use the Comments field (see below) instead.</p></td>
+					<td><p>Chemical substance or parameter you're monitoring. You must select a standard term from the <a href="/help/detailed-guides/parameters">parameters controlled list</a>.<br>A CSV file will insert double quotes if the parameter name includes a comma, eg "1,4-Dioxane". You cannot give comments in the parameter field. Use the Comments field (see below) instead.</p></td>
 					<td>Yes</td>
 				</tr>
 				<tr>
@@ -123,30 +123,30 @@
 					<td>
 						<p>Unit of your measurement. You must give emissions readings in %v/v or mg/mg3. Give temperature in DegC. Give pressure in KPa or mBar.<br>
 						You cannot leave this field blank. Use 'pH' or 'meteorological' where appropriate.</p>
-						<p>You must select an entry from the <a href="/help/detailed-guides/units-and-measures">units and measures controlled list</a>.</td>
+						<p>You must select a standard term from the <a href="/help/detailed-guides/units-and-measures">units and measures controlled list</a>.</td>
 					<td>Yes</td>
 				</tr>
 				<tr>
 					<td>Ref_Period</td>
-					<td>Reference period for the sample, as specified in the permit or licence (eg, Hourly mean). You must select an entry from the <a href="/help/detailed-guides/reference-periods">reference period controlled list</a> if you give a reference period.</td>
+					<td>Reference period for the sample, as specified in the permit or licence (eg, Hourly mean). You must select a standard term from the <a href="/help/detailed-guides/reference-periods">reference period controlled list</a> if you give a reference period.</td>
 					<td>Provide where possible</td>
 				</tr>
 				<tr>
 					<td>Mon_Period</td>
 					<td>
-						<p>Standard name for the date range covered by the data return (eg Continuous, or Monthly).</p>
-						<p>You must select an entry from the <a href="/help/detailed-guides/monitoring-period">monitoring period controlled list</a> to enter data here for monitoring carried out over a period of time. You can leave blank for spot samples. Don't give the year in this field - you should give that in Mon_Date.</p>
+						<p>The date range covered by the data return (eg Continuous, or Monthly).</p>
+						<p>You must select a standard term from the <a href="/help/detailed-guides/monitoring-period">monitoring period controlled list</a> to enter data here for monitoring carried out over a period of time. You can leave blank for spot samples. Don't give the year in this field - you should give that in Mon_Date.</p>
 					</td>
 					<td>Only for returns that cover more than 1 point in time - ie, not spot samples.</td>
 				</tr>
 				<tr>
 					<td>Meth_Stand</td>
-					<td>Method or standard used for monitoring. You must use a term from the <a href="/help/detailed-guides/monitoring-standard">monitoring standard or method controlled list</a>.</td>
+					<td>Method or standard used for monitoring. You must select a standard term from the <a href="/help/detailed-guides/monitoring-standard">monitoring standard or method controlled list</a>.</td>
 					<td>Provide where possible</td>
 				</tr>
         <tr>
           <td>Txt_Value</td>
-          <td>A field for text-based qualifiers (eg, dry weight). You can only use a qualifier from the <a href="/help/detailed-guides/qualifiers">text value controlled list</a>.</td>
+          <td>A field for text-based qualifiers (eg, dry weight). You must select a standard term from the <a href="/help/detailed-guides/qualifiers">text value controlled list</a>.</td>
           <td>Optional</td>
         </tr>
 				<tr>
@@ -166,7 +166,7 @@
 				</tr>
 				<tr>
 					<td>Comments</td>
-					<td>Use this optional field for free-text comments about the row of data. Avoid unncessary commas and symbols.</td>
+					<td>Use this optional field for free-text comments about the row of data. Avoid unnecessary commas and symbols.</td>
 					<td>Optional</td>
 				</tr>
 			</table>
@@ -208,7 +208,7 @@
 					<td>EPR/IED Surface water emissions return</td>
 					<td>
 						<ul class="list">
-							<li><strong>Unit</strong>: use either flow (l/s or m3/day) or concentration mg/l (exceptions: pH and temperature).</li>
+							<li><strong>Unit</strong>: use either flow (l/s or m3/day) or concentration mg/l (exceptions - pH and temperature).</li>
 							<li><strong>Reference period</strong>: use either instantaneous or spot sample.</li>
 						</ul>
 					</td>
@@ -243,7 +243,7 @@
 				</tr>
 				<tr>
 					<td>EPR/IED Landfill annual monitoring report</td>
-					<td><strong>Unit</strong>: for a parameter of Energy produced the unit should be MWh. For a parameter of Methane the unit should be %v/v. For a parameter of available capacity – the unit should be m3. For some other parameters (tbc) – the unit should be a flow measurement.</td>
+					<td><strong>Unit</strong>: for a parameter of energy produced the unit should be MWh. For a parameter of methane the unit should be %v/v. For a parameter of available capacity – the unit should be m3. For some other parameters (tbc) – the unit should be a flow measurement.</td>
 				</tr>
 			</table>
 </div>
