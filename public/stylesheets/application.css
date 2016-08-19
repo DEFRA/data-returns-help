@@ -2238,6 +2238,21 @@ input.validation-code {
   padding: 0 15px;
 }
 
+.data-exchange-protocol .head-section h1 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: none;
+}
+
+@media (min-width: 641px) {
+  .data-exchange-protocol .head-section h1 {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+
 .data-exchange-protocol .inner-block {
   padding: 0 30px;
 }
@@ -2256,6 +2271,15 @@ input.validation-code {
 }
 
 .data-exchange-protocol .list li:last-child {
+  margin-bottom: 0;
+}
+
+.data-exchange-protocol .example-file-wrapper {
+  overflow: auto;
+  margin-bottom: 30px;
+}
+
+.data-exchange-protocol .example-file-wrapper table, .data-exchange-protocol .example-file-wrapper .example-file {
   margin-bottom: 0;
 }
 
@@ -2396,16 +2420,17 @@ input.validation-code {
 
 .data-exchange-protocol h2 {
   font-family: "nta", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.2;
+  font-size: 20px;
+  line-height: 1.1111111111;
   font-weight: 700;
   text-transform: none;
+  margin-top: 45px;
 }
 
 @media (min-width: 641px) {
   .data-exchange-protocol h2 {
-    font-size: 24px;
-    line-height: 1.25;
+    font-size: 27px;
+    line-height: 1.1111111111;
   }
 }
 
@@ -2430,6 +2455,7 @@ input.validation-code {
   line-height: 1.25;
   font-weight: 700;
   text-transform: none;
+  margin-top: 45px;
 }
 
 @media (min-width: 641px) {
@@ -2445,7 +2471,6 @@ input.validation-code {
 
 .data-exchange-protocol table {
   margin-bottom: 45px;
-  margin-top: 15px;
 }
 
 .data-exchange-protocol table caption {
