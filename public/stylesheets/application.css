@@ -2843,6 +2843,7 @@ input.validation-code {
 .example-file {
   width: 100%;
   margin-bottom: 60px;
+  margin-right: 15px;
 }
 
 .example-file table th, .example-file table td {
